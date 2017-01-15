@@ -65,13 +65,13 @@ module.exports = React.createClass({
             </Link>
             <Link> | </Link>
             <Link
-              to={prefixLink('/sponsor/')}
+              to={prefixLink('/our_sponsors/')}
               style={{
                 color: 'black',
                 textDecoration: 'none',
               }}
             >
-              SPONSOR
+              Current SPONSORs
             </Link>
             <Link> | </Link>
             <Link
