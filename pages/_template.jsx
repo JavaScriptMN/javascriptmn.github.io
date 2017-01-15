@@ -39,7 +39,7 @@ module.exports = React.createClass({
                 textDecoration: 'none',
               }}
             >
-              <img src="javascriptmn.png" />
+              <img src="/javascriptmn.png" />
               {config.siteTitle}
             </Link>
           </Container>

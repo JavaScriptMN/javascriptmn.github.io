@@ -16,7 +16,6 @@ export default class Index extends React.Component {
             {"name": "description", "content": "Sample"},
             {"name": "keywords", "content": "sample, something"},
           ]}
-          base={[{ "href" : "/" }]}
         />
         <Meetup
           location="Olson"
