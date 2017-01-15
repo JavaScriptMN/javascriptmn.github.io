@@ -17,12 +17,9 @@ export default class Index extends React.Component {
             {"name": "keywords", "content": "sample, something"},
           ]}
         />
-        <h1>
-          NEXT MEETUP:
-        </h1>
         <Meetup
           location="Olson"
-          date="TODAY"
+          date="Wed Jan 25 2017 6:30PM CST"
           title="January Meetup"
           url="https://meetup.com/javascriptmn"
         />
