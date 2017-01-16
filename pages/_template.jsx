@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
 import '../css/markdown-styles'
+import '../css/main.scss'
 import { config } from 'config'
 
 import { rhythm } from '../utils/typography'
@@ -17,80 +18,29 @@ module.exports = React.createClass({
   render () {
     return (
       <div>
-        <Headroom
-          wrapperStyle={{
-            marginBottom: rhythm(1),
-          }}
-          style={{
-            background: 'lightgray',
-          }}
-        >
-          <Container
-            style={{
-              maxWidth: 960,
-              paddingTop: 0,
-              padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            }}
-          >
-            <Link
-              to={prefixLink('/')}
-              style={{
-                color: 'black',
-                textDecoration: 'none',
-              }}
-            >
-              <img src="/javascriptmn.png" />
-              {config.siteTitle}
+        <Headroom style={{background: '#fff'}}>
+          <Container className="primary-navigation" >
+            <Link to={prefixLink('/')} >
+              <img className="logo" src="images/javascriptmn.png" />
             </Link>
-          </Container>
-          <Container>
-            <Link
-              to={prefixLink('/about/')}
-              style={{
-                color: 'black',
-                textDecoration: 'none',
-              }}
-            >
-              ABOUT
+            <Link to={prefixLink('/about/')} >
+              About
             </Link>
-            <Link> | </Link>
-            <Link
-              to={prefixLink('/code-of-conduct/')}
-              style={{
-                color: 'black',
-                textDecoration: 'none',
-              }}
-            >
-              CODE OF CONDUCT
+            <Link to={prefixLink('/code-of-conduct/')} >
+              Code of conduct
             </Link>
-            <Link> | </Link>
-            <Link
-              to={prefixLink('/our_sponsors/')}
-              style={{
-                color: 'black',
-                textDecoration: 'none',
-              }}
-            >
-              Current SPONSORs
+            <Link to={prefixLink('/our_sponsors/')} >
+              Current Sponsors
             </Link>
-            <Link> | </Link>
-            <Link
-              to={prefixLink('/speak/')}
-              style={{
-                color: 'black',
-                textDecoration: 'none',
-              }}
-            >
-              SPEAK
+            <Link className="highlight" to={prefixLink('/speak/')} >
+              Speak
             </Link>
-            <Link> | </Link>
           </Container>
         </Headroom>
+
         <Container
           style={{
-            maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            paddingTop: 0,
+            maxWidth: '100vw'
           }}
         >
           {this.props.children}

@@ -31,3 +31,5 @@ node_modules
 
 # Environment file
 .envrc
+
+.DS_Store
