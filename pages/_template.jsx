@@ -26,11 +26,11 @@ module.exports = React.createClass({
             <Link to={prefixLink('/about/')} >
               About
             </Link>
-            <Link to={prefixLink('/code-of-conduct/')} >
-              Code of Conduct
-            </Link>
             <Link to={prefixLink('/our_sponsors/')} >
               Current Sponsors
+            </Link>
+            <Link to={prefixLink('/code-of-conduct/')} >
+              Code of Conduct
             </Link>
             <Link className="highlight" to={prefixLink('/speak/')} >
               Speak
@@ -43,19 +43,35 @@ module.exports = React.createClass({
         </Container>
 
         <Container style={{ maxWidth: '100vw' }} className="footer">
-          <div className="footer-sitemap">
+          <div className="footer-column footer-sitemap">
+            <h6>Sitemap</h6>
+            <Link to={prefixLink('/')} >
+              Home
+            </Link>
             <Link to={prefixLink('/about/')} >
               About
-            </Link>
-            <Link to={prefixLink('/code-of-conduct/')} >
-              Code of Conduct
             </Link>
             <Link to={prefixLink('/our_sponsors/')} >
               Current Sponsors
             </Link>
+            <Link to={prefixLink('/code-of-conduct/')} >
+              Code of Conduct
+            </Link>
             <Link className="highlight" to={prefixLink('/speak/')} >
               Speak
             </Link>
+          </div>
+          <div className="footer-column footer-social-sharing">
+            <h6>Social Sharing</h6>
+            <div className="social">
+              twitter
+            </div>
+            <div className="social">
+              facebook? 
+            </div>
+            <div className="social">
+              meetup 
+            </div>
           </div>
         </Container>
       </div>

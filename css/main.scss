@@ -27,10 +27,11 @@ img {
     text-decoration: none;
     color: #000;
     font-weight: bold;
-    margin-right: 25px;
+    margin-right: 15px;
     padding: 0px 5px;
     font-size: 0.9rem;
     letter-spacing: 0.03rem;
+    border: 3px solid transparent;
 
     &:last-child {
       margin-right: 0;
@@ -39,7 +40,7 @@ img {
   }
 
   .highlight {
-    border: 1px solid #ccc;
+    border: 3px solid #e5cf5f;
   }
 
 }
@@ -266,12 +267,16 @@ address {
 
 .footer {
   display: flex;
-  width: 100%;
+  justify-content: center;
   min-height: 300px;
-  color: #000;
-  max-width: 1000px;
-  margin: 0 auto;
-  border-top: 3px solid #efefef;
+  color: #666;
+  margin-top: 10px;
+  border-top: 5px solid #eee;
+  padding: 20px 10%;
+}
+
+.footer-column {
+  flex: 1;
 }
 
 .footer-sitemap {
@@ -279,10 +284,18 @@ address {
   flex-direction: column;
 
   a {
-    color: #000;
+    font-size: 0.8rem;
+    color: #ccc;
     text-decoration: none;
-    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.2 ease-out;
+
+    &:hover {
+      color: #444;
+    }
+
   }
+
 
 }
 
@@ -292,6 +305,7 @@ address {
   max-width: 960px;
   box-sizing: border-box;
   margin: 2% auto;
+  border: 5px solid #e5cf5f;
 }
 
 .code-of-conduct {
