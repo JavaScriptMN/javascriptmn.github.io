@@ -17,7 +17,7 @@ module.exports = React.createClass({
   },
   render () {
     return (
-      <div>
+      <div className="site-wrapper">
         <Headroom style={{background: '#fff'}}>
           <Container className="primary-navigation" >
             <Link to={prefixLink('/')} >
@@ -38,11 +38,7 @@ module.exports = React.createClass({
           </Container>
         </Headroom>
 
-        <Container
-          style={{
-            maxWidth: '100vw'
-          }}
-        >
+        <Container style={{ maxWidth: '100vw' }} >
           {this.props.children}
         </Container>
       </div>
