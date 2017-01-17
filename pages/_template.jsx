@@ -27,7 +27,7 @@ module.exports = React.createClass({
               About
             </Link>
             <Link to={prefixLink('/code-of-conduct/')} >
-              Code of conduct
+              Code of Conduct
             </Link>
             <Link to={prefixLink('/our_sponsors/')} >
               Current Sponsors
@@ -38,8 +38,25 @@ module.exports = React.createClass({
           </Container>
         </Headroom>
 
-        <Container style={{ maxWidth: '100vw' }} >
+        <Container className="content-body" style={{ maxWidth: '100vw' }} >
           {this.props.children}
+        </Container>
+
+        <Container style={{ maxWidth: '100vw' }} className="footer">
+          <div className="footer-sitemap">
+            <Link to={prefixLink('/about/')} >
+              About
+            </Link>
+            <Link to={prefixLink('/code-of-conduct/')} >
+              Code of Conduct
+            </Link>
+            <Link to={prefixLink('/our_sponsors/')} >
+              Current Sponsors
+            </Link>
+            <Link className="highlight" to={prefixLink('/speak/')} >
+              Speak
+            </Link>
+          </div>
         </Container>
       </div>
     )

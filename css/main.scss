@@ -60,7 +60,6 @@ img {
   min-height: 100vh;
   background: url('/images/jsmn-hero-banner.jpg') center center no-repeat;
   background-size: cover;
-  padding: 20% 0;
   box-sizing: border-box;
 }
 
@@ -75,7 +74,7 @@ img {
 
 .hero-container-content {
   max-width: 1000px;
-  padding: 30px;
+  padding: 50px 0 0;
 }
 
 .sponsered-by-label {
@@ -196,5 +195,83 @@ img {
 }
 
 .secondary-content {
+  position: relative;
   display: flex;
+  margin: 3% auto;
+  border: 5px solid #e5cf5f;
+  padding: 20px;
+  max-width: 1000px;
+}
+
+.secondary-content-header {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  font-size: 1.8rem;
+  background: #000;
+  color: #fff;
+  padding: 5px 8px;
+}
+
+.tilt-left {
+
+  .secondary-content-header {
+    top: -10px;
+    left: -35px;
+    transform: rotate( -1deg );
+  }
+
+}
+
+.tilt-right {
+
+  .secondary-content-header {
+    top: -10px;
+    right: -35px;
+    transform: rotate( 1deg );
+  }
+}
+
+.secondary-content-blurb {
+  width: 85%;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #efefef;
+}
+
+.map-container {
+  width: 500px;
+  height: 350px;
+  background: #eee;
+}
+
+address {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  font-family: 'Didot';
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  min-height: 300px;
+  color: #000;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #efefef;
+}
+
+.footer-sitemap {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+
+  }
+
 }
