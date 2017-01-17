@@ -271,7 +271,7 @@ address {
   color: #000;
   max-width: 1000px;
   margin: 0 auto;
-  background: #efefef;
+  border-top: 3px solid #efefef;
 }
 
 .footer-sitemap {
@@ -309,4 +309,42 @@ address {
     font-size: 0.95rem;
   }
 
+}
+
+.sponser-level {
+  font-style: oblique;
+  color: #666;
+  margin: 10px 0;
+}
+
+.sponsers-page {
+
+  .sponser-container-row {
+    margin: 20px 0 40px;
+  }
+
+}
+
+.sponser-tier-2 {
+
+  .sponser {
+    width: 200px;
+    height: 100px;
+  }
+
+}
+
+.sponser-tier-3 {
+
+  .sponser {
+    width: 180px;
+    height: 80px;
+  }
+
+}
+
+.empty-sponser {
+  background: #eee;
+  font-style: oblique;
+  font-size: 0.9rem;
 }
