@@ -164,15 +164,24 @@ img {
 }
 
 .next-event-timestamp {
-  margin-top: 5px;
+  display: block;
   font-size: 1rem;
+  text-align: center;
+  width: 80%;
+  margin: 15px auto 0;
+
+  @include break-at( sm ) {
+    width: unset;
+    margin: 5px 0 0 0;
+    text-align: left;
+  }
 
 }
 
 .button-row {
   display: flex;
   align-items: center;
-  margin: 30px 0 0;
+  margin: 20px 0 0;
   flex-direction: column;
 
   @include break-at( sm ) {
