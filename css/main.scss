@@ -17,15 +17,11 @@ img {
 
 .primary-navigation {
   display: flex;
-  flex-direction: column;
   background: #fff;
   padding: 10px 0;
 
-  .logo {
-    width: 25px;
-  }
-
   a {
+    display: block;
     text-transform: uppercase;
     text-decoration: none;
     color: #000;
@@ -53,6 +49,55 @@ img {
       font-size: 0.9rem;
     }
 
+  }
+
+}
+
+.logo-container {
+  width: 100px;
+
+  a {
+    display: block;
+  }
+
+  .logo {
+    display: block;
+    width: 100%;
+  }
+
+  @include break-at( sm ) {
+    width: auto;
+
+    .logo {
+      display: block;
+      width: 25px;
+    }
+
+  }
+
+}
+
+.secondary-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+
+  a {
+    margin: 0;
+    flex: 1 1 50%;
+    text-align: center;
+  }
+
+  @include break-at( sm ) {
+    flex-wrap: nowrap;
+
+    a {
+      margin-right: 10px;
+      text-align: left;
+      flex: unset;
+    }
   }
 
 }
@@ -307,7 +352,6 @@ img {
     left: 5px;
   }
 
-
   @include break-at( sm ) {
 
     .secondary-content-header {
@@ -321,29 +365,45 @@ img {
 
 .tilt-right {
 
-  .info-column {
-    padding-left: 20px;
-  }
-
   .secondary-content-blurb {
+    margin-top: 10px;
     margin-bottom: 10px;
   }
 
   .secondary-content-header {
-    top: -10px;
-    right: -35px;
+    right: 5px;
+    top: 5px;
     transform: rotate( 1deg );
   }
+
+  @include break-at( sm ) {
+
+    .secondary-content-blurb {
+      margin-top: 25px;
+    }
+
+    .info-column {
+      padding-left: 20px;
+    }
+
+    .secondary-content-header {
+      top: -10px;
+      right: -35px;
+    }
+
+  }
+
 }
 
 .secondary-content-blurb {
   margin-top: 45px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding-bottom: 10px;
   border-bottom: 1px solid #efefef;
 
   @include break-at( sm ) {
     width: 85%;
+    font-size: 1.1rem;
   }
 
 }
@@ -418,7 +478,7 @@ address {
   box-sizing: border-box;
   margin: 2% auto;
   border: 5px solid #e5cf5f;
-  padding: 20px;
+  padding: 80px 20px 0;
 
   @include break-at( sm ) {
     margin: 2% auto;
@@ -461,10 +521,19 @@ address {
 }
 
 .tier-title {
-  font-size: 1.6rem;
+  font-size: 1.45rem;
   font-family: 'Didot';
   font-style: oblique;
-  opacity: 0.6;
+  opacity: 0.8;
+  text-align: center;
+  display: block;
+
+  @include break-at( sm ) {
+    opacity: 0.6;
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
 }
 
 .sponser-tier-2 {
@@ -496,3 +565,15 @@ address {
   text-transform: uppercase;
 }
 
+.sponsers-page {
+
+  .sponser-container-row {
+    padding: 10px 0;
+
+    @include break-at( sm ) {
+      padding: 40px 0 45px;
+    }
+
+  }
+
+}

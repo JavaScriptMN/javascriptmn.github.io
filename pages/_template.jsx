@@ -21,21 +21,25 @@ module.exports = React.createClass({
       <div className="site-wrapper">
         <Headroom style={{background: '#fff'}}>
           <Container className="primary-navigation" >
-            <Link to={prefixLink('/')} >
-              <img className="logo" src="/images/javascriptmn.png" />
-            </Link>
-            <Link to={prefixLink('/about/')} >
-              About
-            </Link>
-            <Link to={prefixLink('/our_sponsors/')} >
-              Current Sponsors
-            </Link>
-            <Link to={prefixLink('/code-of-conduct/')} >
-              Code of Conduct
-            </Link>
-            <Link className="highlight" to={prefixLink('/speak/')} >
-              Speak
-            </Link>
+            <div className="logo-container">
+              <Link to={prefixLink('/')} >
+                <img className="logo" src="/images/javascriptmn.png" />
+              </Link>
+            </div>
+            <div className="secondary-nav">
+              <Link to={prefixLink('/about/')} >
+                About
+              </Link>
+              <Link to={prefixLink('/our_sponsors/')} >
+                Current Sponsors
+              </Link>
+              <Link to={prefixLink('/code-of-conduct/')} >
+                Code of Conduct
+              </Link>
+              <Link className="highlight" to={prefixLink('/speak/')} >
+                Speak
+              </Link>
+            </div>
           </Container>
         </Headroom>
 
