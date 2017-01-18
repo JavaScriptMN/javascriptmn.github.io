@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
 import '../css/markdown-styles'
+import '../css/mixins.scss'
 import '../css/main.scss'
 import { config } from 'config'
 
@@ -21,7 +22,7 @@ module.exports = React.createClass({
         <Headroom style={{background: '#fff'}}>
           <Container className="primary-navigation" >
             <Link to={prefixLink('/')} >
-              <img className="logo" src="images/javascriptmn.png" />
+              <img className="logo" src="/images/javascriptmn.png" />
             </Link>
             <Link to={prefixLink('/about/')} >
               About
