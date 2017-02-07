@@ -27,10 +27,7 @@ module.exports = React.createClass({
               </Link>
             </div>
             <div className="secondary-nav">
-              <Link to={prefixLink('/about/')} >
-                About
-              </Link>
-              <Link to={prefixLink('/our_sponsors/')} >
+              <Link to={prefixLink('/our-sponsors/')} >
                 Current Sponsors
               </Link>
               <Link to={prefixLink('/code-of-conduct/')} >
@@ -54,7 +51,7 @@ module.exports = React.createClass({
               <Link to={prefixLink('/')} >
                 Home
               </Link>
-              <Link to={prefixLink('/our_sponsors/')} >
+              <Link to={prefixLink('/our-sponsors/')} >
                 Current Sponsors
               </Link>
               <Link to={prefixLink('/code-of-conduct/')} >
