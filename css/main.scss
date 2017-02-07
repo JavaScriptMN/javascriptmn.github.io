@@ -118,6 +118,12 @@ img {
   min-height: 55px;
   box-sizing: border-box;
   transition: all 0.2s ease-out;
+  text-decoration: none;
+  color: #000;
+
+  &.small-button {
+    max-width: 150px;
+  }
 
   &:hover {
     background: #000;
@@ -217,8 +223,9 @@ img {
 
 .secondary-content-header {
   display: inline-block;
-  position: relative;
+  position: absolute;
   margin: 0;
+  top: 0;
   font-size: 1.8rem;
   background: #000;
   color: #fff;
@@ -237,6 +244,14 @@ img {
 
 .tilt-right {
 
+  .info-column {
+    padding-left: 20px;
+  }
+
+  .secondary-content-blurb {
+    margin-bottom: 10px;
+  }
+
   .secondary-content-header {
     top: -10px;
     right: -35px;
@@ -246,7 +261,7 @@ img {
 
 .secondary-content-blurb {
   width: 85%;
-  margin-top: 10px;
+  margin-top: 45px;
   font-size: 1.1rem;
   padding-bottom: 10px;
   border-bottom: 1px solid #efefef;
@@ -267,21 +282,33 @@ address {
 
 .footer {
   display: flex;
-  justify-content: center;
   min-height: 300px;
   color: #666;
   margin-top: 10px;
   border-top: 5px solid #eee;
   padding: 20px 10%;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-direction: row;
 }
 
 .footer-column {
-  flex: 1;
-}
-
-.footer-sitemap {
+  flex: 1 1 45%;
+  padding: 0 2.5%;
+  border-right: 1px dotted rgba( #000, 0.1 );
   display: flex;
   flex-direction: column;
+
+  &:last-child {
+    border-right: none;
+  }
 
   a {
     font-size: 0.8rem;
@@ -296,12 +323,12 @@ address {
 
   }
 
-
 }
 
 .interior-page {
+  position: relative;
   background: #ffffff;
-  padding: 25px;
+  padding: 75px 25px 25px;
   max-width: 960px;
   box-sizing: border-box;
   margin: 2% auto;
@@ -331,12 +358,20 @@ address {
   margin: 10px 0;
 }
 
-.sponsers-page {
+.sponser-tier {
+  position: relative;
 
   .sponser-container-row {
-    margin: 20px 0 40px;
+    padding: 40px 0 45px;
   }
 
+}
+
+.tier-title {
+  font-size: 1.6rem;
+  font-family: 'Didot';
+  font-style: oblique;
+  opacity: 0.6;
 }
 
 .sponser-tier-2 {
@@ -362,3 +397,9 @@ address {
   font-style: oblique;
   font-size: 0.9rem;
 }
+
+.footer h6 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+

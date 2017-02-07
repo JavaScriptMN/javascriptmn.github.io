@@ -43,34 +43,33 @@ module.exports = React.createClass({
         </Container>
 
         <Container style={{ maxWidth: '100vw' }} className="footer">
-          <div className="footer-column footer-sitemap">
-            <h6>Sitemap</h6>
-            <Link to={prefixLink('/')} >
-              Home
-            </Link>
-            <Link to={prefixLink('/about/')} >
-              About
-            </Link>
-            <Link to={prefixLink('/our_sponsors/')} >
-              Current Sponsors
-            </Link>
-            <Link to={prefixLink('/code-of-conduct/')} >
-              Code of Conduct
-            </Link>
-            <Link className="highlight" to={prefixLink('/speak/')} >
-              Speak
-            </Link>
-          </div>
-          <div className="footer-column footer-social-sharing">
-            <h6>Social Sharing</h6>
-            <div className="social">
-              twitter
+          <div className="footer-content">
+            <div className="footer-column footer-sitemap">
+              <h6>Meetup</h6>
+              <Link to={prefixLink('/')} >
+                Home
+              </Link>
+              <Link to={prefixLink('/about/')} >
+                About
+              </Link>
+              <Link to={prefixLink('/our_sponsors/')} >
+                Current Sponsors
+              </Link>
+              <Link to={prefixLink('/code-of-conduct/')} >
+                Code of Conduct
+              </Link>
+              <Link className="highlight" to={prefixLink('/speak/')} >
+                Speak
+              </Link>
             </div>
-            <div className="social">
-              facebook? 
-            </div>
-            <div className="social">
-              meetup 
+            <div className="footer-column footer-social-sharing">
+              <h6>Connect</h6>
+              <div className="social">
+                <a href="https://twitter.com/JavaScriptMN/">Twitter</a>
+              </div>
+              <div className="social">
+                <a href="https://www.meetup.com/JavaScriptMN/events/">Calendar</a>
+              </div>
             </div>
           </div>
         </Container>
