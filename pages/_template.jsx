@@ -54,9 +54,6 @@ module.exports = React.createClass({
               <Link to={prefixLink('/')} >
                 Home
               </Link>
-              <Link to={prefixLink('/about/')} >
-                About
-              </Link>
               <Link to={prefixLink('/our_sponsors/')} >
                 Current Sponsors
               </Link>
