@@ -1,4 +1,6 @@
-# Sponsorship Opprotunities
+<div class="interior-page tilt-left">
+
+  <h1 class="secondary-content-header">Sponsorship Opportunities</h1>
 
 ### $2,500 Level
 
@@ -27,3 +29,5 @@ Sponsors provide us with merchandise (t-shirts, software, membershipts ect...) t
 - Their branded merchandise will be handed out at our to those who attend and participate at our meetups. 
 - Website: Link 
 - Meetups: Joint slide with other sponsors at this level
+
+</div>
