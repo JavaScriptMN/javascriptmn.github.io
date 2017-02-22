@@ -154,7 +154,7 @@ a {
 
 }
 
-.sponsered-by-label {
+.sponsored-by-label {
   text-align: center;
 }
 
@@ -263,7 +263,7 @@ a {
 
 }
 
-.sponser-container {
+.sponsor-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -276,20 +276,20 @@ a {
 
 }
 
-.sponser-container-row {
+.sponsor-container-row {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
-  .sponser {
+  .sponsor {
     margin-bottom: 10px;
   }
 
   @include break-at( sm ) {
     flex-direction: row;
 
-    .sponser {
+    .sponsor {
       margin-bottom: 0;
     }
 
@@ -304,7 +304,7 @@ a {
   font-size: 1.4rem;
 }
 
-.sponser {
+.sponsor {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -520,16 +520,16 @@ address {
 
 }
 
-.sponser-level {
+.sponsor-level {
   font-style: oblique;
   color: #666;
   margin: 10px 0;
 }
 
-.sponser-tier {
+.sponsor-tier {
   position: relative;
 
-  .sponser-container-row {
+  .sponsor-container-row {
     padding: 40px 0 45px;
   }
 
@@ -551,25 +551,25 @@ address {
 
 }
 
-.sponser-tier-2 {
+.sponsor-tier-2 {
 
-  .sponser {
+  .sponsor {
     width: 200px;
     height: 100px;
   }
 
 }
 
-.sponser-tier-3 {
+.sponsor-tier-3 {
 
-  .sponser {
+  .sponsor {
     width: 180px;
     height: 80px;
   }
 
 }
 
-.empty-sponser {
+.empty-sponsor {
   background: #eee;
   font-style: oblique;
   font-size: 0.9rem;
@@ -580,9 +580,9 @@ address {
   text-transform: uppercase;
 }
 
-.sponsers-page {
+.sponsors-page {
 
-  .sponser-container-row {
+  .sponsor-container-row {
     padding: 10px 0;
 
     @include break-at( sm ) {
