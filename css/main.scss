@@ -238,6 +238,10 @@ a {
       background-size: 85%;
     }
 
+    .youtube {
+      background: url('/images/icons/youtube-white.svg') center center no-repeat;
+      background-size: 95%;
+    }
   }
 
   .icon {
@@ -257,6 +261,10 @@ a {
     background-size: 95%;
   }
 
+  .youtube {
+    background: url('/images/icons/youtube-black.svg') center center no-repeat;
+    background-size: 95%;
+  }
   &:last-child {
     margin-right: 0;
   }
