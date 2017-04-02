@@ -31,8 +31,8 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "sh -e update-admin-pages; gatsby build",
-    "deploy": "gatsby build --prefix-links && gh-pages -d public -b master",
+    "build": "gatsby build",
+    "deploy": "gatsby build --prefix-links && gh-pages -a -d public -b master",
     "develop": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
