@@ -5,6 +5,7 @@
   "private": true,
   "author": "JavaScriptMN Organizers <javascriptmn@gmail.com",
   "dependencies": {
+    "date-fns": "^1.28.5",
     "front-matter": "^2.1.1",
     "gatsby": "^0.12.20",
     "highlight.js": "^9.8.0",
