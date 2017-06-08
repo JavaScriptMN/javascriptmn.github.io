@@ -1,2 +1,3 @@
 siteTitle="JavaScriptMN"
+apiRoot="https://ctpukojlyh.execute-api.us-east-1.amazonaws.com/prod/meetup/next"
 linkPrefix=""

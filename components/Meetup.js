@@ -1,7 +1,8 @@
 import React from 'react'
 import format from 'date-fns/format'
+import { config } from 'config'
 
-const NEXT_MEETUP_URI = 'https://ctpukojlyh.execute-api.us-east-1.amazonaws.com/prod/meetup/next'
+const NEXT_MEETUP_URI = config.apiRoot
 
 export default class Meetup extends React.Component {
   state = {
