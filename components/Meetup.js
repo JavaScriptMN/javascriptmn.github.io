@@ -12,8 +12,8 @@ export default class Meetup extends React.Component {
     venue: {name: ''}
   }
 
-  componentWillMount () {
-    fetch(NEXT_MEETUP_URI)
+  componentDidMount () {
+    window.fetch(NEXT_MEETUP_URI)
       .then((res) => res.json())
       .then((json) => this.setState(json))
   }
