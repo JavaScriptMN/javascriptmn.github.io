@@ -2,6 +2,10 @@ import React from 'react'
 import Meetup from '../components/Meetup'
 
 class index extends React.Component {
+  openURL (url) {
+    window.open(url)
+  }
+
   render () {
     return (<div className='Index'>
       <div className='hero-container'>
@@ -13,15 +17,15 @@ class index extends React.Component {
           <Meetup />
 
           <div className='button-row'>
-            <button className='outline-button' onclick={'window.open("https://meetup.com/javascriptmn")'}>
+            <button className='outline-button' onClick={_ => this.openURL("https://meetup.com/javascriptmn")}>
               <span className='icon rsvp'></span>
               <span>RSVP</span>
             </button>
-            <button className='outline-button' onclick={'window.open("https://javascriptmn-slack.herokuapp.com")'}>
+            <button className='outline-button' onClick={_ => this.openURL("https://javascriptmn-slack.herokuapp.com")}>
               <span className='icon slack'></span>
               <span>Join our Slack</span>
             </button>
-            <button className='outline-button' onclick={'window.open("https://www.youtube.com/channel/UC4DA_d8mD-14ZSBvIb1jmXg")'}>
+            <button className='outline-button' onClick={_ => this.openURL("https://www.youtube.com/channel/UC4DA_d8mD-14ZSBvIb1jmXg")}>
               <span className='icon youtube'></span>
               <span>Watch previous talks</span>
             </button>
