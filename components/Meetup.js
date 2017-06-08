@@ -1,5 +1,6 @@
 import React from 'react'
 import format from 'date-fns/format'
+import 'whatwg-fetch'
 import { config } from 'config'
 
 const NEXT_MEETUP_URI = config.apiRoot
