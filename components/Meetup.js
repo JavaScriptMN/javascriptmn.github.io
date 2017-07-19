@@ -8,7 +8,7 @@ const NEXT_MEETUP_URI = config.apiRoot
 export default class Meetup extends React.Component {
   state = {
     name: '',
-    time: 0,
+    time: Date.now(),
     venue: {name: ''}
   }
 
@@ -41,7 +41,7 @@ export default class Meetup extends React.Component {
           <div className="event-name">
             {this.state.name}
           </div>
-          <span className="next-event-timestamp">{format(this.state.time, 'dddd, MMMM Mo, YYYY')} at <strong>{ this.state.venue.name }</strong></span>
+          <span className="next-event-timestamp">{format(new Date(this.state.time), 'dddd, MMMM Do, YYYY')} at <strong>{ this.state.venue.name }</strong></span>
         </div>
       </div>
     )
