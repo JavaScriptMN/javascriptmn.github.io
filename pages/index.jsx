@@ -13,8 +13,9 @@ class index extends React.Component {
         <div className='hero-container-content'>
 
           <div className='primary-header'>JavaScript MN</div>
+          <div className='secondary-header'>A monthly meetup for anyone interested in JavaScript and related technologies in the Twin Cities.</div>
 
-          <Meetup />
+	  <Meetup />
 
           <div className='button-row'>
             <button className='outline-button' onClick={_ => this.openURL("https://meetup.com/javascriptmn")}>
@@ -51,7 +52,7 @@ class index extends React.Component {
       <div id='#location' className='secondary-content tilt-left'>
         <div className='column'>
           <h2 className='secondary-content-header'>Location</h2>
-          <div className='secondary-content-blurb'>We are graciously hosted at <strong>Olson\'s</strong> office space in downtown Minneapolis. Parking is available in the adjacent lot or additional street parking near the building.</div>
+          <div className='secondary-content-blurb'>We are graciously hosted at <strong>Olson's</strong> office space in downtown Minneapolis. Parking is available in the adjacent lot or additional street parking near the building.</div>
           <address>
             Olson<br />
             420 N 5th St<br />
