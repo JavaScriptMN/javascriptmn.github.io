@@ -21,16 +21,12 @@ export default class Meetup extends React.Component {
     })
     window
       .fetch(NEXT_MEETUP_URI)
-      .then(res => {
-        // Gotta love network errors...
-        if (!res.ok) throw Error(response.statusText)
-        return response
-      })
       .then(res => res.json())
       .then(json =>
         this.setState({
           ...json,
-          loading: false
+          loading: false,
+          error: false
         })
       )
       .catch(_ => this.setState({ loading: false, error: true }))
