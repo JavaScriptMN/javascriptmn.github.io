@@ -9,7 +9,9 @@
     list-style: none;
   }
 
-  & li { display: inline-block; }
+  & li {
+    display: inline-block;
+  }
 
   & a {
     background: var(--color);
@@ -24,5 +26,3 @@
 .the-postcss-class {
   text-decoration: underline;
 }
-
-
