@@ -9,13 +9,28 @@ export default class Meetup extends React.Component {
   state = {
     name: '',
     time: Date.now(),
-    venue: {name: ''}
+    venue: {name: ''},
+    loading: false,
+    error: false
   }
 
   componentDidMount () {
+    this.setState({
+      loading: true,
+      error: false
+    })
     window.fetch(NEXT_MEETUP_URI)
+      .then((res) => {
+        // Gotta love network errors...
+        if (!res.ok) throw Error(response.statusText)
+        return response
+      })
       .then((res) => res.json())
-      .then((json) => this.setState(json))
+      .then((json) => this.setState({
+        ...json,
+        loading: false
+      }))
+      .catch(_ => this.setState({loading: false, error: true}))
   }
 
   render () {
@@ -34,16 +49,33 @@ export default class Meetup extends React.Component {
         rsvpButton: {}
     }
 
-    return (
-      <div className="next-event">
+    const MeetupDescription = ({name, time, venue}) => (<div className="next-event">
         <div className="next-event-tagline">
           <strong>Next Event:</strong>
           <div className="event-name">
-            {this.state.name}
+            {name}
           </div>
-          <span className="next-event-timestamp">{format(new Date(this.state.time), 'dddd, MMMM Do, YYYY')} at <strong>{ this.state.venue.name }</strong></span>
+          {
+            (time && venue && venue.name) &&
+            (<span className="next-event-timestamp">{format(new Date(time), 'dddd, MMMM Do, YYYY')} at <strong>{ venue.name }</strong></span>)
+          }
         </div>
-      </div>
-    )
+      </div>)
+
+    if (this.state.loading)
+      return (<MeetupDescription
+          name={'Loading...'}
+         />)
+
+    if (this.state.error)
+      return (<MeetupDescription
+          name={(<a href='https://meetup.com/javascriptmn'>Check Meetup.com for updates</a>)}
+         />)
+
+    return (<MeetupDescription
+        name={this.state.name}
+        time={this.state.time}
+        venue={this.state.venue}
+      />)
   }
 }
