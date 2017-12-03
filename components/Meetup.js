@@ -22,9 +22,11 @@ export default class Meetup extends React.Component {
     window
       .fetch(NEXT_MEETUP_URI)
       .then(res => res.json())
-      .then(json =>
+      .then(({ name, time, venue }) =>
         this.setState({
-          ...json,
+          name,
+          time,
+          venue,
           loading: false,
           error: false
         })
@@ -43,9 +45,7 @@ export default class Meetup extends React.Component {
       title: {
         fontSize: '2rem',
         margin: '1rem'
-      },
-      bug: {},
-      rsvpButton: {}
+      }
     }
 
     const MeetupDescription = ({ name, time, venue }) => (

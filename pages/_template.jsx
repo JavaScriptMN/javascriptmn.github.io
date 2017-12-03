@@ -10,12 +10,7 @@ import { config } from 'config'
 
 import { rhythm } from '../utils/typography'
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      children: React.PropTypes.any,
-    }
-  },
+export default class Template extends React.Component {
   render () {
     return (
       <div className="site-wrapper">
@@ -74,5 +69,5 @@ module.exports = React.createClass({
         </Container>
       </div>
     )
-  },
-})
+  }
+}
