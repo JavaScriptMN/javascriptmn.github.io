@@ -18,7 +18,7 @@ export default class Template extends React.Component {
           <Container className="primary-navigation" >
             <div className="logo-container">
               <Link to={prefixLink('/')} >
-                <img className="logo" src="/images/javascriptmn.png" />
+                <img className="logo" src="/images/javascriptmn.png" alt="Logo for JavaScriptMN" />
               </Link>
             </div>
             <div className="secondary-nav">
