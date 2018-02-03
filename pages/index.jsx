@@ -39,7 +39,7 @@ class index extends React.Component {
 
             <div className='sponsor-container-row'>
               <div className='sponsor'>
-                <img src={'images/sponsors/logo-icf-olson.svg'} />
+                <img src={'images/sponsors/logo-icf-olson.svg'} alt='Logo for ICF Olson' />
               </div>
             </div>
 
@@ -70,7 +70,7 @@ class index extends React.Component {
 
       <div className='secondary-content tilt-right'>
         <div className='column'>
-          <img width={650} src={'images/speak.jpeg'} />
+          <img width={650} src={'images/speak.jpeg'} alt='A panorama of a JavaScriptMN event' />
         </div>
         <div className='column info-column'>
           <h2 className='secondary-content-header'>Speaking</h2>
