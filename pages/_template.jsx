@@ -62,6 +62,9 @@ export default class Template extends React.Component {
                 <a href="https://twitter.com/JavaScriptMN/">Twitter</a>
               </div>
               <div className="social">
+                <a href="https://github.com/JavaScriptMN/javascriptmn.github.io">GitHub</a>
+              </div>
+              <div className="social">
                 <a href="https://www.meetup.com/JavaScriptMN/events/">Calendar</a>
               </div>
             </div>
