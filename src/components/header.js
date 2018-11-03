@@ -6,11 +6,7 @@ import jsmnImg from '../images/JSMN-opaque-js.png'
 
 const Header = () => (
   <Headroom style={{ background: '#fff' }}>
-    <div className="primary-navigation" style={{
-      maxWidth: 960,
-      marginLeft: 'auto',
-      marginRight: 'auto',
-    }}>
+    <nav className="primary-navigation">
       <div className="logo-container">
         <Link to={withPrefix('/')}>
           <img className="logo" src={jsmnImg} alt="Logo for JavaScriptMN" />
@@ -23,7 +19,7 @@ const Header = () => (
           Speak
         </Link>
       </div>
-    </div>
+    </nav>
   </Headroom>
 )
 

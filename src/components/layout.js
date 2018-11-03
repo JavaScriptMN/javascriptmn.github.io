@@ -35,9 +35,9 @@ const Layout = ({ children }) => (
           <GoogleFont typography={typography} />
         </Helmet>
         <Header />
-        <div className="content-body" style={{ maxWidth: '100vw' }}>
+        <min role="main" className="content-body">
           {children}
-        </div>
+        </min>
         <Footer />
       </div>
     )}

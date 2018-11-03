@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, withPrefix } from 'gatsby'
 
 const Footer = () => (
-  <div style={{ maxWidth: '100vw' }} className="footer">
+  <footer className="footer">
     <div className="footer-content">
       <div className="footer-column footer-sitemap">
         <h6>Meetup</h6>
@@ -23,9 +23,7 @@ const Footer = () => (
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 )
-
-Footer.propTypes = {}
 
 export default Footer

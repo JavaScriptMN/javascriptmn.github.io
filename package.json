@@ -36,7 +36,7 @@
     "deploy": "gatsby build --prefix-links && gh-pages -a -d public -b master",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.{js,json,css}\""
+    "format": "prettier --write \"src/**/*.{js,json,scss,css}\""
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
@@ -54,7 +54,7 @@
     }
   },
   "lint-staged": {
-    "{src}/**/*.{js,json,css}": [
+    "{src}/**/*.{js,json,scss,css}": [
       "prettier --write",
       "git add"
     ]

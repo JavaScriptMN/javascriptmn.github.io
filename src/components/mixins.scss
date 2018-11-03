@@ -5,25 +5,27 @@ $breakpoints: (
   gt-md: 1280px,
   lg: 1280px,
   gt-lg: 1920px,
-  xl: 1920px
+  xl: 1920px,
 );
 
-@mixin break-at( $name-or-min-width ) {
+@mixin break-at($name-or-min-width) {
   $min-width: 0;
   @if map-has-key($breakpoints, $name-or-min-width) {
     $min-width: map-get($breakpoints, $name-or-min-width);
-  }
-  @else if type-of($name-or-min-width) == 'number' and not unitless($name-or-min-width) {
+  } @else if
+    type-of($name-or-min-width) ==
+    'number' and not
+    unitless($name-or-min-width)
+  {
     $min-width: $name-or-min-width;
-  }
-  @else {
-    @error(
+  } @else {
+    @error (
 		"No breakpoint named " 
 		+ $name-or-min-width 
 		+ " in $breakpoints.  Available breakpoints:" 
 		+ inspect($breakpoints) + ".  You can also pass in a value like 500px.");
   }
-  @media only screen and ( min-width: $min-width ) {
+  @media only screen and (min-width: $min-width) {
     @content;
   }
 }

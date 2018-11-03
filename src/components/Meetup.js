@@ -11,13 +11,13 @@ const MeetupDescription = ({ name, time, venue }) => (
       <strong>Next Event:</strong>
       <div className="event-name">{name}</div>
       {time &&
-      venue &&
-      venue.name && (
-        <span className="next-event-timestamp">
-                {format(new Date(time), 'dddd, MMMM Do, YYYY')} at{' '}
-          <strong>{venue.name}</strong>
-              </span>
-      )}
+        venue &&
+        venue.name && (
+          <span className="next-event-timestamp">
+            {format(new Date(time), 'dddd, MMMM Do, YYYY')} at{' '}
+            <strong>{venue.name}</strong>
+          </span>
+        )}
     </div>
   </div>
 )
@@ -46,7 +46,7 @@ class Meetup extends Component {
           venue,
           loading: false,
           error: false,
-        }),
+        })
       )
       .catch(() => this.setState({ loading: false, error: true }))
   }
@@ -65,7 +65,7 @@ class Meetup extends Component {
     //   },
     // }
 
-    if (this.state.loading) return <MeetupDescription name={'Loading...'}/>
+    if (this.state.loading) return <MeetupDescription name={'Loading...'} />
 
     if (this.state.error)
       return (
