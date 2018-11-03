@@ -1,50 +1,60 @@
 {
   "name": "javascriptmn",
   "description": "JavaScriptMN website",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "author": "JavaScriptMN Organizers <javascriptmn@gmail.com>",
   "dependencies": {
-    "date-fns": "^1.28.5",
-    "front-matter": "^2.1.1",
-    "gatsby": "^0.12.20",
-    "highlight.js": "^9.8.0",
-    "history": "^2.0.2",
-    "husky": "^0.14.3",
-    "js-yaml": "^3.7.0",
-    "lint-staged": "^6.0.0",
-    "markdown-it": "^7.0.1",
-    "markdown-it-abbr": "^1.0.3",
-    "markdown-it-attrs": "^0.6.3",
-    "markdown-it-deflist": "^2.0.1",
-    "markdown-it-footnote": "^3.0.1",
-    "markdown-it-sub": "^1.0.0",
-    "object-assign": "^4.1.0",
-    "prettier": "^1.8.2",
-    "react-headroom": "^2.1.2",
-    "react-helmet": "^3.2.2",
-    "react-responsive-grid": "^0.3.3",
-    "react-typography": "^0.15.0",
-    "toml-js": "0.0.8",
-    "typography": "^0.15.0",
-    "typography-plugin-code": "^0.15.0",
-    "whatwg-fetch": "^2.0.3"
+    "date-fns": "^1.29.0",
+    "gatsby": "^2.0.38",
+    "gatsby-image": "^2.0.19",
+    "gatsby-plugin-manifest": "^2.0.7",
+    "gatsby-plugin-offline": "^2.0.11",
+    "gatsby-plugin-react-helmet": "^3.0.1",
+    "gatsby-plugin-sass": "^2.0.3",
+    "gatsby-plugin-sharp": "^2.0.11",
+    "gatsby-plugin-typography": "^2.2.1",
+    "gatsby-source-filesystem": "^2.0.7",
+    "gatsby-transformer-sharp": "^2.1.7",
+    "node-sass": "^4.9.4",
+    "prop-types": "latest",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-headroom": "^2.2.4",
+    "react-helmet": "^5.2.0",
+    "react-typography": "^0.16.13",
+    "typography": "^0.16.17",
+    "typography-plugin-code": "^0.16.11",
+    "whatwg-fetch": "^3.0.0"
   },
-  "devDependencies": {
-    "gh-pages": "^0.12.0"
-  },
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
-  "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-links && gh-pages -a -d public -b master",
     "develop": "gatsby develop",
-    "precommit": "lint-staged",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run develop",
+    "format": "prettier --write \"src/**/*.{js,json,css}\""
+  },
+  "devDependencies": {
+    "husky": "^1.1.3",
+    "lint-staged": "^8.0.4",
+    "prettier": "^1.14.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JavaScriptMN/javascriptmn.github.io"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "{pages,components,css}/**/*.{js,json,css}": [
-      "prettier --write --no-semi --single-quote",
+    "{src}/**/*.{js,json,css}": [
+      "prettier --write",
       "git add"
     ]
   }
