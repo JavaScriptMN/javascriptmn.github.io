@@ -25,7 +25,7 @@ a {
   display: flex;
   background: #fff;
   padding: 10px 0;
-  max-width: 960px;
+  max-width: map-get($breakpoints, md);
   margin-left: auto;
   margin-right: auto;
 
@@ -158,7 +158,11 @@ a {
   padding: 20px;
 
   @include break-at(sm) {
-    max-width: 1000px;
+    max-width: map-get($breakpoints, md);
+    padding: 50px 20px 20px;
+  }
+
+  @include break-at(md) {
     padding: 50px 0 0;
   }
 }
@@ -355,7 +359,7 @@ a {
   @include break-at(sm) {
     margin: 3% auto;
     flex-direction: row;
-    max-width: 1000px;
+    max-width: map-get($breakpoints, md);
     width: 100%;
   }
 }
@@ -378,7 +382,7 @@ a {
     left: 5px;
   }
 
-  @include break-at(sm) {
+  @include break-at(md) {
     .secondary-content-header {
       top: -10px;
       left: -35px;
@@ -398,6 +402,13 @@ a {
     transform: rotate(1deg);
   }
 
+  @include break-at(md) {
+     .secondary-content-header {
+       top: -10px;
+       right: -35px;
+     }
+   }
+
   @include break-at(sm) {
     .secondary-content-blurb {
       margin-top: 25px;
@@ -405,11 +416,6 @@ a {
 
     .info-column {
       padding-left: 20px;
-    }
-
-    .secondary-content-header {
-      top: -10px;
-      right: -35px;
     }
   }
 }
@@ -459,7 +465,7 @@ address {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 1000px;
+  max-width: map-get($breakpoints, md);
   margin: 0 auto;
   flex-direction: row;
 }
@@ -498,7 +504,7 @@ address {
 
   @include break-at(sm) {
     margin: 2% auto;
-    max-width: 960px;
+    max-width: map-get($breakpoints, md);
     padding: 75px 25px 25px;
   }
 }
@@ -569,6 +575,8 @@ address {
   font-style: oblique;
   font-size: 0.9rem;
   font-weight: normal;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .footer h6 {
