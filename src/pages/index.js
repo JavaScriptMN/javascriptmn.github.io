@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, withPrefix } from 'gatsby'
 import Meetup from '../components/Meetup'
 
 import speakImg from '../images/speak.jpeg'
@@ -88,9 +89,9 @@ const IndexPage = () => (
           We are always open to new speakers, please see our questionnaire for
           more details.
         </div>
-        <a className="outline-button small-button" href={'/speak/'}>
+        <Link className="outline-button small-button" to={withPrefix('/speak/')}>
           Learn More
-        </a>
+        </Link>
       </div>
     </div>
   </Layout>
