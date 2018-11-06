@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import format from 'date-fns/format'
 import 'whatwg-fetch'
-import config from '../../config.json'
+import { graphql, StaticQuery } from 'gatsby'
 
-const NEXT_MEETUP_URI = config.apiRoot
 
 const MeetupDescription = ({ name, time, venue }) => (
   <div className="next-event">
@@ -37,7 +37,7 @@ class Meetup extends Component {
       error: false,
     })
     window
-      .fetch(NEXT_MEETUP_URI)
+      .fetch(this.props.apiRoot)
       .then(res => res.json())
       .then(({ name, time, venue }) =>
         this.setState({
@@ -88,4 +88,22 @@ class Meetup extends Component {
   }
 }
 
-export default Meetup
+Meetup.propTypes = {
+  apiRoot: PropTypes.string.isRequired,
+}
+
+const WrappedMeetup = () => (
+  <StaticQuery
+    query={graphql`
+      query SiteApiRootQuery {
+        site {
+          siteMetadata {
+            apiRoot
+          }
+        }
+      }
+    `}
+    render={data => <Meetup apiRoot={data.site.siteMetadata.apiRoot}/>} />
+)
+
+export default WrappedMeetup
