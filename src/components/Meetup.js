@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import format from 'date-fns/format'
-import 'whatwg-fetch'
 import { graphql, StaticQuery } from 'gatsby'
 
 const MeetupDescription = ({ name, time, venue }) => (
