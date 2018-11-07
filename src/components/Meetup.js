@@ -4,7 +4,6 @@ import format from 'date-fns/format'
 import 'whatwg-fetch'
 import { graphql, StaticQuery } from 'gatsby'
 
-
 const MeetupDescription = ({ name, time, venue }) => (
   <div className="next-event">
     <div className="next-event-tagline">
@@ -103,7 +102,8 @@ const WrappedMeetup = () => (
         }
       }
     `}
-    render={data => <Meetup apiRoot={data.site.siteMetadata.apiRoot}/>} />
+    render={data => <Meetup apiRoot={data.site.siteMetadata.apiRoot} />}
+  />
 )
 
 export default WrappedMeetup

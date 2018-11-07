@@ -12,7 +12,7 @@ import logoDaugherty from '../images/sponsors/logo-daugherty.png'
 const OurSponsors = () => (
   <Layout>
     <div className="interior-page sponsors-page tilt-left">
-      <h1 className="secondary-content-header">Current sponsors</h1>
+      <h1 className="secondary-content-header">Current Sponsors</h1>
 
       <div className="sponsor-tier platinum">
         <span className="tier-title">Host</span>

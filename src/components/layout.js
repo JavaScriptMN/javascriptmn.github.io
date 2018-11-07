@@ -1,12 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { TypographyStyle, GoogleFont } from 'react-typography'
 import Helmet from 'react-helmet'
 import { graphql, StaticQuery } from 'gatsby'
 import Header from './header'
 import Footer from './footer'
 import './main.scss'
-import typography from '../utils/typography'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -31,8 +29,6 @@ const Layout = ({ children }) => (
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <TypographyStyle typography={typography} />
-          <GoogleFont typography={typography} />
         </Helmet>
         <Header />
         <min role="main" className="content-body">

@@ -12,7 +12,8 @@ const SponsorshipOpportunities = () => (
         <li>Website: Link & Logo on front page (and sponsor page)</li>
         <li>
           Meetups: Stand alone slide with thanks and description of services by
-          host at the start of the meetup & website link on Meetup.com
+          host at the start of the meetup & website link on{' '}
+          <a href="https://www.meetup.com">Meetup.com</a>
         </li>
         <li>
           YouTube: 15 Second Video Intro with stand alone slide (including link

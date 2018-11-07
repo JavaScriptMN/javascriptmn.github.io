@@ -89,7 +89,10 @@ const IndexPage = () => (
           We are always open to new speakers, please see our questionnaire for
           more details.
         </div>
-        <Link className="outline-button small-button" to={withPrefix('/speak/')}>
+        <Link
+          className="outline-button small-button"
+          to={withPrefix('/speak/')}
+        >
           Learn More
         </Link>
       </div>
