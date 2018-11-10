@@ -51,7 +51,7 @@ const OurSponsors = () => (
           </a>
           <a
             className="sponsor"
-            href="https://tkjs.us/jsmn"
+            href="https://trackjs.com"
             target="_blank"
             rel="noopener noreferrer"
           >
