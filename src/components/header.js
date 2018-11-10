@@ -5,7 +5,7 @@ import Headroom from 'react-headroom'
 import jsmnImg from '../images/JSMN-opaque-js.png'
 
 const Header = () => (
-  <Headroom style={{ background: '#fff' }}>
+  <Headroom>
     <nav className="primary-navigation">
       <div className="logo-container">
         <Link to={withPrefix('/')}>

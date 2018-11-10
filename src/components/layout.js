@@ -31,9 +31,9 @@ const Layout = ({ children }) => (
           />
         </Helmet>
         <Header />
-        <min role="main" className="content-body">
+        <main role="main" className="content-body">
           {children}
-        </min>
+        </main>
         <Footer />
       </div>
     )}
