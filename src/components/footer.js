@@ -21,6 +21,9 @@ const Footer = () => (
         <div className="social">
           <a href="https://www.meetup.com/JavaScriptMN/events/">Calendar</a>
         </div>
+        <div className="social">
+          <a href="https://github.com/JavaScriptMN/">GitHub</a>
+        </div>
       </div>
     </div>
   </footer>
