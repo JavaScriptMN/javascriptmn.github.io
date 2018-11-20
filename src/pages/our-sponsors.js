@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, withPrefix } from 'gatsby'
 import Layout from '../components/layout'
 
-import logoIcfOlson from '../images/sponsors/logo-icf-olson.svg'
+import logoSpace150 from '../images/sponsors/logo-space150.jpg'
 import logoTwilio from '../images/sponsors/logo-twilio.svg'
 import logoTrackjs from '../images/sponsors/logo-trackjs.svg'
 import logoFrontendMasters from '../images/sponsors/logo-frontend-masters.svg'
@@ -20,14 +20,14 @@ const OurSponsors = () => (
         <div className="sponsor-container-row">
           <a
             className="sponsor"
-            href="https://icfolson.com"
+            href="https://space150.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src={logoIcfOlson}
-              alt="Host: ICF Olson"
-              title="Host: ICF Olson"
+              src={logoSpace150}
+              alt="Host: space150"
+              title="Host: space150"
             />
           </a>
         </div>
@@ -73,13 +73,6 @@ const OurSponsors = () => (
               title="Platinum Sponsor: Frontend Masters"
             />
           </a>
-        </div>
-      </div>
-
-      <div className="sponsor-tier gold">
-        <span className="tier-title">Gold</span>
-
-        <div className="sponsor-container-row sponsor-tier-2">
           <a
             className="sponsor"
             href="https://www.chrobinson.com"
@@ -92,6 +85,13 @@ const OurSponsors = () => (
               title="Gold Sponsor: C.H. Robinson"
             />
           </a>
+        </div>
+      </div>
+
+      <div className="sponsor-tier gold">
+        <span className="tier-title">Gold</span>
+
+        <div className="sponsor-container-row sponsor-tier-2">
           <a
             className="sponsor"
             href="https://www.daugherty.com"

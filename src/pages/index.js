@@ -3,7 +3,7 @@ import { Link, withPrefix } from 'gatsby'
 import Meetup from '../components/Meetup'
 
 import speakImg from '../images/speak.jpeg'
-import icfOlsonImg from '../images/sponsors/logo-icf-olson.svg'
+import logoSpace150 from '../images/sponsors/logo-space150.jpg'
 import Layout from '../components/layout'
 
 const IndexPage = () => (
@@ -43,7 +43,7 @@ const IndexPage = () => (
           <div className="sponsored-by-title">Hosted By:</div>
           <div className="sponsor-container-row">
             <div className="sponsor">
-              <img src={icfOlsonImg} alt="Logo for ICF Olson" />
+              <img src={logoSpace150} alt="Logo for space150" />
             </div>
           </div>
         </div>
@@ -54,16 +54,15 @@ const IndexPage = () => (
       <div className="column">
         <h2 className="secondary-content-header">Location</h2>
         <div className="secondary-content-blurb">
-          We are graciously hosted at <strong>Olson's</strong> office space in
-          downtown Minneapolis. Parking is available in the adjacent lot or
-          additional street parking near the building.
+          We are graciously hosted at <strong>space150's</strong> office space in
+          the North Loop neighborhood of Minneapolis. Street parking and public transportation are recommended.
         </div>
         <address>
-          Olson
+          space150
           <br />
-          420 N 5th St
+          212 N 3rd St
           <br />
-          Suite #1000
+          Suite #150
           <br />
           Minneapolis, MN 55401
         </address>
