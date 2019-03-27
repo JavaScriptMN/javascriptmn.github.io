@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'JavaScriptMN',
-    apiRoot: 'https://next-meetup-proxy-dnfelnhlmh.now.sh'
+    apiRoot: 'https://next-meetup-proxy-sjyqybbeam.now.sh'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
