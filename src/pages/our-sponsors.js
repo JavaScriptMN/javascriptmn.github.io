@@ -2,12 +2,11 @@ import React from 'react'
 import { Link, withPrefix } from 'gatsby'
 import Layout from '../components/layout'
 
-import logoSpace150 from '../images/sponsors/logo-space150.jpg'
+import logoWeWork from '../images/sponsors/logo-wework.svg'
 import logoTwilio from '../images/sponsors/logo-twilio.svg'
 import logoTrackjs from '../images/sponsors/logo-trackjs.svg'
 import logoFrontendMasters from '../images/sponsors/logo-frontend-masters.svg'
 import logoChRobinson from '../images/sponsors/logo-ch-robinson.svg'
-import logoDaugherty from '../images/sponsors/logo-daugherty.png'
 
 const OurSponsors = () => (
   <Layout>
@@ -20,14 +19,14 @@ const OurSponsors = () => (
         <div className="sponsor-container-row">
           <a
             className="sponsor"
-            href="https://space150.com"
+            href="https://www.wework.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              src={logoSpace150}
-              alt="Host: space150"
-              title="Host: space150"
+              src={logoWeWork}
+              alt="Host: WeWork"
+              title="Host: WeWork"
             />
           </a>
         </div>
@@ -92,19 +91,12 @@ const OurSponsors = () => (
         <span className="tier-title">Gold</span>
 
         <div className="sponsor-container-row sponsor-tier-2">
-          <a
-            className="sponsor"
-            href="https://www.daugherty.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            className="sponsor empty-sponsor"
+            to={withPrefix('/sponsorship-opportunities')}
           >
-            <img
-              style={{ maxHeight: 80, width: 'auto' }}
-              src={logoDaugherty}
-              alt="Gold Sponsor: Daugherty"
-              title="Gold Sponsor: Daugherty"
-            />
-          </a>
+            Become a Sponsor!
+          </Link>
         </div>
       </div>
 
