@@ -3,7 +3,7 @@ import { Link, withPrefix } from 'gatsby'
 import Meetup from '../components/Meetup'
 
 import speakImg from '../images/speak.jpeg'
-import logoSpace150 from '../images/sponsors/logo-space150.jpg'
+import logoWeWork from '../images/sponsors/logo-wework.svg'
 import Layout from '../components/layout'
 
 const IndexPage = () => (
@@ -42,9 +42,14 @@ const IndexPage = () => (
         <div className="sponsor-container">
           <div className="sponsored-by-title">Hosted By:</div>
           <div className="sponsor-container-row">
-            <div className="sponsor">
-              <img src={logoSpace150} alt="Logo for space150" />
-            </div>
+            <a
+              className="sponsor"
+              href="https://www.wework.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={logoWeWork} alt="WeWork logo" title="WeWork" />
+            </a>
           </div>
         </div>
       </div>
@@ -54,17 +59,18 @@ const IndexPage = () => (
       <div className="column">
         <h2 className="secondary-content-header">Location</h2>
         <div className="secondary-content-blurb">
-          We are graciously hosted at <strong>space150's</strong> office space in
-          the North Loop neighborhood of Minneapolis. Street parking and public transportation are recommended.
+          We are graciously hosted at <strong>WeWork's</strong> Uptown
+          Minneapolis Coworking Space. Parking is available on-street (paid at
+          meters, free on residential streets) and in the adjacent MoZaic Art
+          Park Ramp (paid). Public transportation access to the 6, 12, 17, 21,
+          23, 53, and 612 bus routes is just a minute away.
         </div>
         <address>
-          space150
+          WeWork
           <br />
-          212 N 3rd St
+          1330 Lagoon Ave
           <br />
-          Suite #150
-          <br />
-          Minneapolis, MN 55401
+          Minneapolis, MN 55408
         </address>
       </div>
       <div className="column">
