@@ -1,6 +1,8 @@
 # JavaScriptMN
 This site is generated with [Gatsby.js](https://github.com/gatsbyjs/gatsby).
 
+PRs should be made against the `build` branch. Upon merging, a maintainer will separately run the deploy scripts which commits a build version of the site to the `master` branch.
+
 ## Prerequisites
 Install dependencies with `npm install`.
 
