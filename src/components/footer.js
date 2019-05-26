@@ -24,6 +24,11 @@ const Footer = () => (
         <div className="social">
           <a href="https://github.com/JavaScriptMN/">GitHub</a>
         </div>
+        <div className="social">
+          <a href="https://www.youtube.com/channel/UC4DA_d8mD-14ZSBvIb1jmXg">
+            YouTube
+          </a>
+        </div>
       </div>
     </div>
   </footer>
