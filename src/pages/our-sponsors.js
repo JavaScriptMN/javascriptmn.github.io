@@ -23,11 +23,7 @@ const OurSponsors = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src={logoWeWork}
-              alt="Host: WeWork"
-              title="Host: WeWork"
-            />
+            <img src={logoWeWork} alt="Host: WeWork" title="Host: WeWork" />
           </a>
         </div>
       </div>
