@@ -1,45 +1,36 @@
 {
   "name": "javascriptmn",
   "description": "JavaScriptMN website",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "author": "JavaScriptMN Organizers <javascriptmn@gmail.com>",
-  "dependencies": {
-    "date-fns": "^1.30.1",
-    "gatsby": "^2.7.1",
-    "gatsby-image": "^2.1.1",
-    "gatsby-plugin-manifest": "^2.1.1",
-    "gatsby-plugin-offline": "^2.1.1",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sass": "^2.0.11",
-    "gatsby-plugin-sharp": "^2.1.1",
-    "gatsby-source-filesystem": "^2.0.37",
-    "gatsby-transformer-sharp": "^2.1.19",
-    "node-sass": "^4.12.0",
-    "normalize.css": "^8.0.1",
-    "prop-types": "latest",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-headroom": "^2.2.8",
-    "react-helmet": "^5.2.1",
-    "whatwg-fetch": "^3.0.0"
-  },
+  "dependencies": {},
   "keywords": [
-    "gatsby"
+    "11ty"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "deploy": "gatsby build --prefix-links && gh-pages -a -d public -b master",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.{js,json,scss,css}\""
+    "deploy": "gh-pages -a -d dist -b master",
+    "format": "prettier --write \"src/**/*.{js,json,scss,css}\"",
+    "start": "run-p start:css start:js",
+    "build": "run-s build:css build:js",
+    "start:js": "eleventy --serve",
+    "build:js": "eleventy",
+    "start:css": "postcss ./src/css/tailwind.css -o ./src/css/tailwind.include.css -w",
+    "build:css": "postcss ./src/css/tailwind.css -o ./src/css/tailwind.include.css --env production"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@tailwindcss/typography": "^0.2.0",
+    "autoprefixer": "^10.0.1",
     "gh-pages": "^2.0.1",
-    "husky": "^2.3.0",
-    "lint-staged": "^8.1.7",
-    "prettier": "^1.17.1"
+    "husky": "^4.3.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.1",
+    "postcss-cli": "^8.1.0",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.0.2",
+    "tailwindcss": "^1.8.13"
   },
   "repository": {
     "type": "git",
@@ -47,13 +38,10 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "pretty-quick --staged"
     }
   },
-  "lint-staged": {
-    "{src}/**/*.{js,json,scss,css}": [
-      "prettier --write",
-      "git add"
-    ]
+  "prettier": {
+    "singleQuote": true
   }
 }

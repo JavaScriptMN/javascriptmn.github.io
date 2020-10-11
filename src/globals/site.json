@@ -1,0 +1,50 @@
+{
+  "name": "JavaScriptMN",
+  "description": "A Monthly Meetup For Anyone Interested In Javascript And Related Technologies In The Twin Cities.",
+  "url": "https://javascriptmn.com",
+  "baseUrl": "/",
+  "author": {
+    "handle": "@JavaScriptMN",
+    "name": "JavaScriptMN"
+  },
+  "navigation": [
+    {
+      "path": "",
+      "text": "Home"
+    },
+    {
+      "path": "sponsors",
+      "text": "Sponsors"
+    },
+    {
+      "path": "code-of-conduct",
+      "text": "Code of Conduct"
+    },
+    {
+      "path": "speak",
+      "text": "Speak"
+    }
+  ],
+  "connect": [
+    {
+      "href": "https://twitter.com/JavaScriptMN/",
+      "text": "Twitter"
+    },
+    {
+      "href": "https://meetup.com/javascriptmn",
+      "text": "Meetup"
+    },
+    {
+      "href": "https://www.youtube.com/channel/UC4DA_d8mD-14ZSBvIb1jmXg",
+      "text": "YouTube"
+    },
+    {
+      "href": "https://javascriptmn-slack.herokuapp.com/",
+      "text": "Slack"
+    },
+    {
+      "href": "https://github.com/JavaScriptMN/",
+      "text": "GitHub"
+    }
+  ]
+}

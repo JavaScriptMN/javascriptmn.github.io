@@ -1,0 +1,39 @@
+[
+  {
+    "section": "Host 🌎",
+    "sponsors": [
+      {
+        "imgSrc": "logo-wework.svg",
+        "href": "https://www.wework.com",
+        "title": "WeWork"
+      }
+    ]
+  },
+  {
+    "section": "Diamond 💎",
+    "sponsors": [
+      {
+        "imgSrc": "logo-twilio.svg",
+        "href": "https://twilio.com",
+        "title": "Twilio"
+      },
+      {
+        "imgSrc": "logo-trackjs.svg",
+        "href": "https://trackjs.com",
+        "title": "TrackJS"
+      },
+      {
+        "imgSrc": "logo-frontend-masters.svg",
+        "href": "https://frontendmasters.com",
+        "title": "Frontend Masters"
+      },
+      {
+        "imgSrc": "logo-ch-robinson.svg",
+        "href": "https://www.chrobinson.com",
+        "title": "C.H. Robinson"
+      }
+    ]
+  },
+  { "section": "Gold 🥇", "sponsors": [] },
+  { "section": "Silver 🥈", "sponsors": [] }
+]

@@ -1,0 +1,151 @@
+---
+layout: base
+title: JavaScriptMN
+links:
+  [
+    { 'href': 'https://meetup.com/javascriptmn', 'text': 'RSVP' },
+    {
+      'href': 'https://javascriptmn-slack.herokuapp.com',
+      'text': 'Join our Slack',
+    },
+    {
+      'href': 'https://www.youtube.com/channel/UC4DA_d8mD-14ZSBvIb1jmXg',
+      'text': 'Watch Previous Talks',
+    },
+  ]
+---
+
+<!-- primary content -->
+<div class="container mx-auto px-2 mb-10">
+  <div class="x-h-screen flex justify-center items-center">
+    <div>
+      <!-- <div
+        class="inline-block border-4 border-jsmn-yellow p-2 transform -rotate-25"
+      >
+        <span class="text-xl font-bold">Under Construction</span>
+      </div> -->
+      <div class="text-center">
+        <img
+          src="{{ site.baseUrl }}jsmn-logo.png"
+          alt="JavaScriptMN"
+          class="mx-auto"
+        />
+        <div class="text-4xl font-bold"><h1>JavaScriptMN</h1></div>
+        <p class="text-xl">
+          A monthly meetup for anyone interested in JavaScript and related
+          technologies in the Twin Cities.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- the next section -->
+
+<div class="container mx-auto px-2 mb-10">
+  <div class="x-h-screen flex justify-center items-center">
+    <div class="w-full">
+      <div class="mb-8">
+        <h2
+          class="inline-block bg-black text-white text-2xl font-bold px-4 mb-2 transform -rotate-1"
+        >
+          Upcoming
+        </h2>
+        <div class="bg-jsmn-yellow text-2xl font-bold p-4">
+          Eleventy
+          <small
+            >and the
+            <abbr title="Just Another Monstrosity">JAM</abbr> fad</small
+          >
+          <i>by Brian Mitchell and Ryan Rampersad</i>
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-end items-center mb-2">
+          <h2
+            class="inline-block bg-black text-white text-2xl font-bold px-4 transform rotate-1"
+          >
+            Links
+          </h2>
+        </div>
+        <ul
+          class="flex justify-center sm:justify-end items-center space-y-2 sm:space-y-0 sm:space-x-2 flex-wrap sm:flex-no-wrap"
+        >
+          {% for link in links %}
+          <li class="w-full sm:w-auto">
+            <a
+              class="block text-xl font-semibold border-2 border-black p-4 hover:bg-jsmn-yellow transition-all duration-100"
+              href="{{ link.href }}"
+              >{{ link.text }}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- location, speaking -->
+
+<div class="container mx-auto px-2 mb-10">
+  <div class="x-h-screen flex justify-center items-center">
+    <div class="w-full">
+      <div class="mb-8">
+        <h2
+          class="inline-block bg-black text-white text-2xl font-bold px-4 mb-2 transform -rotate-1"
+        >
+          Location
+        </h2>
+        <div
+          class="border-jsmn-yellow border-4 p-4 flex justify-between items-center flex-wrap sm:flex-no-wrap space-y-4 sm:space-y-0"
+        >
+          <div class="w-full sm:w-1/2">
+            <p class="text-lg leading-7">
+              We are graciously hosted at <b>WeWork</b>'s Uptown Minneapolis
+              Coworking Space. Parking is available on-street (paid at meters,
+              free on residential streets) and in the adjacent MoZaic Art Park
+              Ramp (paid). Public transportation access to the 6, 12, 17, 21,
+              23, 53, and 612 bus routes is just a minute away.
+            </p>
+          </div>
+
+          <div class="w-full sm:w-1/2 flex justify-center">
+            <address class="text-lg font-bold">
+              WeWork<br />
+              1330 Lagoon Ave<br />
+              Minneapolis, MN 55408
+            </address>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-start items-center mb-2">
+          <h2
+            class="inline-block bg-black text-white text-2xl font-bold px-4 transform -rotate-1"
+          >
+            Speaking
+          </h2>
+        </div>
+        <div
+          class="border-jsmn-yellow border-4 p-4 flex justify-between items-center flex-wrap sm:flex-no-wrap space-y-4 sm:space-y-0"
+        >
+          <div>
+            <h3 class="text-2xl font-bold">Interested in speaking?</h3>
+            <p class="text-lg">
+              We are always open to new speakers, please see our questionnaire
+              for more details.
+            </p>
+          </div>
+          <div className="w-full sm:w-auto">
+            <a
+              class="block text-xl font-semibold border-2 border-black p-4 hover:bg-jsmn-yellow transition-all duration-100"
+              href="/speak"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

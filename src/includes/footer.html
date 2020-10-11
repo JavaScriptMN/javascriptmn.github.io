@@ -1,0 +1,45 @@
+<footer class="border-t-2 border-black mt-10">
+  <div class="container mx-auto p-2 pt-4">
+    <div
+      class="flex justify-center items-start space-x-16 divide-x-2 divide-gray-100 divide"
+    >
+      <div class="px-2">
+        <!-- <h6 class="uppercase text-sm font-semibold">Meetup</h6> -->
+        <h5
+          class="uppercase inline-block bg-black text-white font-bold px-4 mb-2 transform -rotate-1"
+        >
+          Meetup
+        </h5>
+        <ul>
+          {% for link in site.navigation %}
+          <li>
+            <a class="hover:underline" href="{{ site.baseUrl }}{{ link.path }}"
+              >{{ link.text }}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="px-2">
+        <!-- <h6 class="uppercase text-sm font-semibold">Connect</h6> -->
+        <h5
+          class="uppercase inline-block bg-black text-white font-bold px-4 mb-2 transform rotate-1"
+        >
+          Connect
+        </h5>
+        <ul>
+          {% for link in site.connect %}
+          <li>
+            <a class="hover:underline" href="{{ link.href }}"
+              >{{ link.text }}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-sm py-8">
+      <p>© 2020 JavaScriptMN</p>
+    </div>
+  </div>
+</footer>

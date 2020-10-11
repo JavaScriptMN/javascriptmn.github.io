@@ -1,0 +1,21 @@
+<header class="bg-jsmn-yellow shadow mb-8">
+  <nav
+    class="container mx-auto p-2 max-w-3xl px-8 pt-2 flex justify-between items-center"
+  >
+    <a class="w-2/5 text-lg font-bold" href="{{ site.baseUrl }}"
+      >{{ site.name }}</a
+    >
+    <ul class="w-3/5 flex flex-wrap md:justify-between justify-evenly">
+      {% for link in site.navigation %}
+      <li>
+        <a
+          class="font-bold transition-all duration-200 p-2 hover:bg-black hover:text-white"
+          href="{{ site.baseUrl }}{{ link.path }}"
+        >
+          {{ link.text }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
