@@ -355,6 +355,7 @@ module.exports = {
       none: 'none',
       disc: 'disc',
       decimal: 'decimal',
+      check: '"✔️"',
     },
     margin: (theme, { negative }) => ({
       auto: 'auto',
