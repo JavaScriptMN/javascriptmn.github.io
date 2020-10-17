@@ -4,7 +4,7 @@ module.exports = {
     purgeLayersByDefault: true,
   },
   purge: {
-    content: ['./src/**/*.(html|njk|svg|md|js)'],
+    content: ['./src/**/*.{html,njk,svg,md,js}'],
   },
   target: 'relaxed',
   prefix: '',
