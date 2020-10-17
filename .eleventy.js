@@ -13,6 +13,5 @@ module.exports = function (config) {
       layouts: 'includes/layouts',
       data: 'globals',
     },
-    htmlTemplateEngine: 'njk',
   };
 };
