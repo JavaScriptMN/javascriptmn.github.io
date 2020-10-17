@@ -8,7 +8,7 @@ layout: prose
 If you have something you think would be great for the group, consider the opportunity to beef up your public speaking skills and hone your understanding of the tech topic at hand by giving a talk at an upcoming meetup. Get in front of the biggest tech meetup in the state to be seen and heard by fellow coders, coworkers, recruiters, and grow your presence in the Twin Cities tech community.
 
 <a class="block text-xl font-semibold border-2 border-black p-4 hover:bg-jsmn-yellow transition-all duration-100 text-center" style="text-decoration: none;"
-href="mailto:javascript.mn@gmail.com">Email us about your idea!</a>
+href="mailto:{{ site.author.email }}?subject=Speak%20at%20JavaScriptMN">Email us about your idea!</a>
 
 ## Speaker Questionnaire
 
