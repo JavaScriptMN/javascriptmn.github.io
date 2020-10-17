@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* custom styles below */
-
 [data-animated-logo] path {
   stroke-dasharray: 17364.90625;
   stroke-dashoffset: 17364.90625;
@@ -20,6 +18,13 @@
   }
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    animation-play-state: paused !important;
+    transition: none !important;
   }
 }
 

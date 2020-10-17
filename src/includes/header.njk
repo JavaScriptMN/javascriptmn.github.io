@@ -1,21 +1,43 @@
-<header class="bg-jsmn-yellow shadow">
-  <nav
-    class="container mx-auto p-2 max-w-3xl px-8 pt-2 flex justify-between items-center"
-  >
-    <a class="w-2/5 text-lg font-bold" href="{{ site.baseUrl }}"
-      >{{ site.name }}</a
-    >
-    <ul class="w-3/5 flex flex-wrap md:justify-between justify-evenly">
+<nav class="bg-gray-800 shadow-md relative">
+  <div class="container mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <button id="ope-let-me-get-this-for-ya" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out" aria-label="Main menu" aria-expanded="false">
+          <svg class="block h-6 w-6" data-menu-button xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="hidden h-6 w-6" data-close-button xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
+        <div class="flex-shrink-0">
+          <a href="{{ site.baseUrl }}" class="flex lg:hidden w-auto">
+            <img class="h-8" src="{{ site.baseUrl }}jsmn-logo.svg" alt="{{ site.name }} logo">
+          </a>
+          <a href="{{ site.baseUrl }}" class="hidden lg:flex items-center w-auto">
+            <img class="h-8 block" src="{{ site.baseUrl }}jsmn-logo.svg" alt="{{ site.name }} logo">
+            <span class="text-white font-bold block pl-4">{{ site.name }}</span>
+          </a>
+        </div>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex">
+          {% for link in site.navigation %}
+            <a href="{{ site.baseUrl }}{{ link.path }}" class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">{{ link.text }}</a>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hidden sm:hidden" data-mobile-menu>
+    <div class="px-2 pt-2 pb-3">
       {% for link in site.navigation %}
-      <li>
-        <a
-          class="font-bold transition-all duration-200 p-2 hover:bg-black hover:text-white"
-          href="{{ site.baseUrl }}{{ link.path }}"
-        >
-          {{ link.text }}
-        </a>
-      </li>
+        <a href="{{ site.baseUrl }}{{ link.path }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">{{ link.text }}</a>
       {% endfor %}
-    </ul>
-  </nav>
-</header>
+
+      {# <a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">🚀</a> #}
+    </div>
+  </div>
+</nav>
