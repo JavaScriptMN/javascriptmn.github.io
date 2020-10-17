@@ -1,5 +1,6 @@
 [
   {
+    "key": "host",
     "section": "Host 🌎",
     "sponsors": [
       {
@@ -10,6 +11,7 @@
     ]
   },
   {
+    "key": "diamond",
     "section": "Diamond 💎",
     "sponsors": [
       {
@@ -34,6 +36,6 @@
       }
     ]
   },
-  { "section": "Gold 🥇", "sponsors": [] },
-  { "section": "Silver 🥈", "sponsors": [] }
+  { "key": "gold", "section": "Gold 🥇", "sponsors": [] },
+  { "key": "silver", "section": "Silver 🥈", "sponsors": [] }
 ]
