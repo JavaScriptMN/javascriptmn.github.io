@@ -1,1 +1,4 @@
+/dist
 *.include.css
+package.json
+package-lock.json
