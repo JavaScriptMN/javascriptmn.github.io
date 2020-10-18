@@ -13,7 +13,7 @@
         <ul>
           {% for link in site.navigation %}
           <li>
-            <a class="hover:underline" href="{{ site.baseUrl }}{{ link.path }}"
+            <a class="hover:underline" href="{{ link.path | url }}"
               >{{ link.text }}</a
             >
           </li>

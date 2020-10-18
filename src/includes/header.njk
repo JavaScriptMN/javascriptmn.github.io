@@ -44,20 +44,20 @@
         class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between"
       >
         <div class="flex-shrink-0">
-          <a href="{{ site.baseUrl }}" class="flex lg:hidden w-auto">
+          <a href="{{ '/' | url }}" class="flex lg:hidden w-auto">
             <img
               class="h-8"
-              src="{{ site.baseUrl }}jsmn-logo.svg"
+              src="{{ '/jsmn-logo.svg' | url }}"
               alt="{{ site.name }} logo"
             />
           </a>
           <a
-            href="{{ site.baseUrl }}"
+            href="{{ '/' | url }}"
             class="hidden lg:flex items-center w-auto"
           >
             <img
               class="h-8 block"
-              src="{{ site.baseUrl }}jsmn-logo.svg"
+              src="{{ '/jsmn-logo.svg' | url }}"
               alt="{{ site.name }} logo"
             />
             <span class="text-white font-bold block pl-4">{{ site.name }}</span>
@@ -67,7 +67,7 @@
           <div class="flex">
             {% for link in site.navigation %}
             <a
-              href="{{ site.baseUrl }}{{ link.path }}"
+              href="{{ link.path | url }}"
               class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
               >{{ link.text }}</a
             >
@@ -81,7 +81,7 @@
     <div class="px-2 pt-2 pb-3">
       {% for link in site.navigation %}
       <a
-        href="{{ site.baseUrl }}{{ link.path }}"
+        href="{{ link.path | url }}"
         class="mt-1 block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
         >{{ link.text }}</a
       >

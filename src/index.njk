@@ -129,7 +129,7 @@ title: JavaScriptMN
           <div className="w-full sm:w-auto">
             <a
               class="block text-xl font-semibold border-2 border-black p-4 hover:bg-jsmn-yellow transition-all duration-100"
-              href="/speak"
+              href="{{ '/speak/' | url }}"
               >Learn More</a
             >
           </div>
@@ -145,7 +145,7 @@ title: JavaScriptMN
             Sponsors
           </h2>
           <p>
-            <a class="hover:underline" href="{{ site.baseUrl }}sponsors/">
+            <a class="hover:underline" href="{{ '/sponsors/' | url }}">
               More Sponsors →
             </a>
           </p>
@@ -165,7 +165,7 @@ title: JavaScriptMN
                   class="flex justify-center items-center shadow transition-all border border-gray-200 hover:border-gray-400 w-full p-4"
                 >
                   <img
-                    src="{{ site.baseUrl }}sponsors/{{ sponsor.imgSrc }}"
+                    src="{{ sponsor.imgSrc | url }}"
                     alt="{{ sponsor.title }}"
                     title="{{ sponsor.title }}"
                     class="h-32"

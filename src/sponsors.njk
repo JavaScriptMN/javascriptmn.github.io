@@ -14,7 +14,7 @@ title: Sponsors
         >
           Sponsors
         </h1>
-        <p><a class="hover:underline" href="{{ site.baseUrl }}sponsorship-opportunities/">Become a sponsor →</a></p>
+        <p><a class="hover:underline" href="{{ '/sponsorship-opportunities/' | url }}">Become a sponsor →</a></p>
         </div>
 
         <div class="border-jsmn-yellow border-4 p-4 divide-y divide-gray-200">
@@ -31,7 +31,7 @@ title: Sponsors
                   class="flex justify-center items-center shadow transition-all border border-gray-200 hover:border-gray-400 w-full p-4 m-2"
                 >
                   <img
-                    src="{{ site.baseUrl }}sponsors/{{ sponsor.imgSrc }}"
+                    src="{{ sponsor.imgSrc | url }}"
                     alt="{{ sponsor.title }}"
                     title="{{ sponsor.title }}"
                     class="h-32"
@@ -44,7 +44,7 @@ title: Sponsors
               >
                 <a
                   class="transition-all transform hover:scale-110 h-32 w-full flex justify-center items-center"
-                  href="{{ site.baseUrl }}sponsorship-opportunities"
+                  href="{{ '/sponsorship-opportunities/' | url }}"
                 >
                   <span class="text-lg font-bold">Become a sponsor →</span>
                 </a>

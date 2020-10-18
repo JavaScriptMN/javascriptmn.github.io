@@ -4,7 +4,7 @@
     "section": "Host 🌎",
     "sponsors": [
       {
-        "imgSrc": "logo-wework.svg",
+        "imgSrc": "/sponsors/logo-wework.svg",
         "href": "https://www.wework.com",
         "title": "WeWork"
       }
@@ -15,22 +15,22 @@
     "section": "Diamond 💎",
     "sponsors": [
       {
-        "imgSrc": "logo-twilio.svg",
+        "imgSrc": "/sponsors/logo-twilio.svg",
         "href": "https://twilio.com",
         "title": "Twilio"
       },
       {
-        "imgSrc": "logo-trackjs.svg",
+        "imgSrc": "/sponsors/logo-trackjs.svg",
         "href": "https://trackjs.com",
         "title": "TrackJS"
       },
       {
-        "imgSrc": "logo-frontend-masters.svg",
+        "imgSrc": "/sponsors/logo-frontend-masters.svg",
         "href": "https://frontendmasters.com",
         "title": "Frontend Masters"
       },
       {
-        "imgSrc": "logo-ch-robinson.svg",
+        "imgSrc": "/sponsors/logo-ch-robinson.svg",
         "href": "https://www.chrobinson.com",
         "title": "C.H. Robinson"
       }

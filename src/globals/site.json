@@ -1,6 +1,6 @@
 {
   "name": "JavaScriptMN",
-  "description": "A Monthly Meetup For Anyone Interested In Javascript And Related Technologies In The Twin Cities.",
+  "description": "A monthly meetup for anyone interested in JavaScript and related technologies in the Twin Cities.",
   "url": "https://javascriptmn.com",
   "baseUrl": "/",
   "author": {
@@ -10,19 +10,19 @@
   },
   "navigation": [
     {
-      "path": "",
+      "path": "/",
       "text": "Home"
     },
     {
-      "path": "sponsors",
+      "path": "/sponsors/",
       "text": "Sponsors"
     },
     {
-      "path": "code-of-conduct",
+      "path": "/code-of-conduct/",
       "text": "Code of Conduct"
     },
     {
-      "path": "speak",
+      "path": "/speak/",
       "text": "Speak"
     }
   ],
