@@ -9,6 +9,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/css/tailwind.include.css');
   eleventyConfig.addPassthroughCopy({ public: './' });
 
+  eleventyConfig.addShortcode('year', function () {
+    return new Date().getFullYear().toString();
+  });
+
   eleventyConfig.addPlugin(inclusiveLangPlugin);
 
   if (process.env.ELEVENTY_ENV === 'production') {
