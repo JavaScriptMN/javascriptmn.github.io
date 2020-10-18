@@ -1,18 +1,6 @@
 ---
 layout: base
 title: JavaScriptMN
-links:
-  [
-    { 'href': 'https://meetup.com/javascriptmn', 'text': 'RSVP' },
-    {
-      'href': 'https://javascriptmn-slack.herokuapp.com',
-      'text': 'Join our Slack',
-    },
-    {
-      'href': 'https://www.youtube.com/channel/UC4DA_d8mD-14ZSBvIb1jmXg',
-      'text': 'Watch Previous Talks',
-    },
-  ]
 ---
 
 <!-- primary content -->
@@ -22,7 +10,9 @@ links:
       <div>
         <div class="text-center flex flex-wrap sm:flex-no-wrap justify-center px-4 sm:px-0">
           <div class="w-full sm:w-1/2">
-            <div class="pl-8 sm:pl-16" data-animated-logo>{% include "_logo.njk" %}</div>
+            <div class="pl-8 sm:pl-16" data-animated-logo>
+              {% include "_logo.svg" %}
+            </div>
           </div>
           <div class="w-full sm:w-1/2 self-center">
             <div class="text-4xl font-bold"><h1>JavaScriptMN</h1></div>
@@ -68,7 +58,7 @@ links:
         <ul
           class="flex justify-center sm:justify-end items-center space-y-2 sm:space-y-0 sm:space-x-2 flex-wrap sm:flex-no-wrap"
         >
-          {% for link in links %}
+          {% for link in actionLinks %}
           <li class="w-full sm:w-auto">
             <a
               class="block text-xl font-semibold border-2 border-black p-4 hover:bg-jsmn-yellow transition-all duration-100"
@@ -117,7 +107,6 @@ links:
         </div>
       </div>
 
-      
       {# speaking #}
       <div class="mb-8">
         <div class="flex justify-start items-center mb-2">
@@ -147,7 +136,6 @@ links:
         </div>
       </div>
 
-
       {# promoted sponsors #}
       <div class="mb-8">
         <div class="flex justify-between items-center mb-2">
@@ -156,68 +144,41 @@ links:
           >
             Sponsors
           </h2>
-          <p><a class="hover:underline" href="{{ site.baseUrl }}sponsors/">More Sponsors →</a></p>
+          <p>
+            <a class="hover:underline" href="{{ site.baseUrl }}sponsors/">
+              More Sponsors →
+            </a>
+          </p>
         </div>
-        <div
-          class="border-jsmn-yellow border-4 p-4"
-        >
-          {# host  #}
-          <div class="w-2/3 mx-auto mb-4">
-          <h3 class="font-bold text-2xl">Host 🌎</h3>
-          <div class="grid sm:grid-cols-4 sm:gap-2 grid-cols-none space-y-4 sm:space-y-0">
+        <div class="border-jsmn-yellow border-4 p-4">
           {% for section in sponsors %}
-            {% if section.key === "host" %}
+          {% if section.showOnHome === true %}
+          <div class="w-2/3 mx-auto mb-4">
+            <h3 class="font-bold text-2xl">{{ section.section }}</h3>
+            <div class="grid sm:grid-cols-4 sm:gap-2 grid-cols-none space-y-4 sm:space-y-0">
               {% for sponsor in section.sponsors %}
               <div class="flex justify-center items-center">
                 <a
-                    href="{{ sponsor.href }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex justify-center items-center shadow transition-all border border-gray-200 hover:border-gray-400 w-full p-4"
-                  >
-                    <img
-                      src="{{ site.baseUrl }}sponsors/{{ sponsor.imgSrc }}"
-                      alt="{{ sponsor.title }}"
-                      title="{{ sponsor.title }}"
-                      class="h-32"
-                    />
-                  </a>
-                  </div>
+                  href="{{ sponsor.href }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex justify-center items-center shadow transition-all border border-gray-200 hover:border-gray-400 w-full p-4"
+                >
+                  <img
+                    src="{{ site.baseUrl }}sponsors/{{ sponsor.imgSrc }}"
+                    alt="{{ sponsor.title }}"
+                    title="{{ sponsor.title }}"
+                    class="h-32"
+                  />
+                </a>
+              </div>
               {% endfor %}
-            {% endif %}
+            </div>
+          </div>
+          {% endif %}
           {% endfor %}
-          </div>
-          </div>
-          {# diamond #}
-          <div class="w-2/3 mx-auto mb-4">
-          <h3 class="font-bold text-2xl">Diamond 💎</h3>
-          <div class="grid sm:grid-cols-4 sm:gap-2 grid-cols-none space-y-4 sm:space-y-0">
-          {% for section in sponsors %}
-            {% if section.key === "diamond" %}
-              {% for sponsor in section.sponsors %}
-                <div class="flex justify-center items-center">
-                <a
-                    href="{{ sponsor.href }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex justify-center items-center shadow transition-all border border-gray-200 hover:border-gray-400 w-full p-4"
-                  >
-                    <img
-                      src="{{ site.baseUrl }}sponsors/{{ sponsor.imgSrc }}"
-                      alt="{{ sponsor.title }}"
-                      title="{{ sponsor.title }}"
-                      class="h-32"
-                    />
-                  </a>
-                </div>
-              {% endfor %}
-            {% endif %}
-          {% endfor %}
-          </div>
-          </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
