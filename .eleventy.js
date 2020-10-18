@@ -1,5 +1,6 @@
 const fs = require('fs');
 const inclusiveLangPlugin = require('@11ty/eleventy-plugin-inclusive-language');
+const cacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
 const htmlmin = require('html-minifier');
 const { minify } = require('terser');
 const siteSettings = require('./src/globals/site.json');
@@ -9,6 +10,22 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ public: './' });
 
   eleventyConfig.addPlugin(inclusiveLangPlugin);
+
+  if (process.env.ELEVENTY_ENV === 'production') {
+    eleventyConfig.addPlugin(cacheBuster({ outputDirectory: 'dist' }));
+
+    eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
+      if (outputPath && outputPath.endsWith('.html')) {
+        return htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true,
+        });
+      }
+
+      return content;
+    });
+  }
 
   eleventyConfig.addNunjucksAsyncFilter('jsmin', async function (
     code,
@@ -41,22 +58,6 @@ module.exports = function (eleventyConfig) {
         });
       },
     },
-  });
-
-  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
-    if (
-      process.env.ELEVENTY_ENV === 'production' &&
-      outputPath &&
-      outputPath.endsWith('.html')
-    ) {
-      return htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true,
-      });
-    }
-
-    return content;
   });
 
   return {
