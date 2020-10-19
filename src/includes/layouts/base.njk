@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="{{ site.description }}"
+      content="{{ description if description else site.description }}"
     />
     <title>
-      {{ title }}{{ "" if title === "JavaScriptMN" else " | JavaScriptMN" }}
+      {{ title }}{{ " | " + site.name if title !== site.name }}
     </title>
 
     <!-- htmlmin:ignore -->
@@ -42,6 +42,26 @@
     />
     <link rel="manifest" href="{{ '/site.webmanifest' | url }}" />
     <link rel="stylesheet" href="{{ '/css/tailwind.include.css' | url }}" />
+
+    {# social meta tags #}
+    <meta property="og:title"
+          content="{{ title }}{{ " | " + site.name if title !== site.name }}">
+    <meta property="og:description"
+          content="{{ description if description else site.description }}">
+    <meta property="og:image"
+          content="{{ site.url }}{{ '/JSMN-opaque-js.png' | url }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta name="twitter:title"
+          content="{{ title }}{{ " | " + site.name if title !== site.name }}">
+    <meta name="twitter:description"
+          content="{{ description if description else site.description }}">
+    <meta name="twitter:image"
+          content="{{ site.url }}{{ '/JSMN-opaque-js.png' | url }}">
+    <meta name="twitter:image:alt" content="{{ site.name }} logo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta name="twitter:site" content="{{ site.author.handle }}">
   </head>
   <body>
     {% include "header.njk" %}
