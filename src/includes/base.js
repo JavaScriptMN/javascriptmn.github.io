@@ -7,21 +7,24 @@
   console.info('%c❤️', 'font-size: 5rem; color: red;');
 
   window.onload = function () {
-    document
-      .querySelector('#ope-let-me-get-this-for-ya')
-      .addEventListener('click', function () {
-        const menu = document.querySelector('[data-menu-button]');
-        const close = document.querySelector('[data-close-button]');
-        const mobileMenu = document.querySelector('[data-mobile-menu]');
+    const menuToggle = document.getElementById('ope-let-me-get-this-for-ya');
+    menuToggle.addEventListener('click', function () {
+      const menu = document.querySelector('[data-menu-button]');
+      const close = document.querySelector('[data-close-button]');
+      const mobileMenu = document.querySelector('[data-mobile-menu]');
 
-        menu.classList.toggle('block');
-        menu.classList.toggle('hidden');
+      menu.classList.toggle('block');
+      menu.classList.toggle('hidden');
 
-        close.classList.toggle('hidden');
-        close.classList.toggle('block');
+      close.classList.toggle('hidden');
+      close.classList.toggle('block');
 
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('block');
-      });
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('block');
+
+      const newExpandedState =
+        menuToggle.getAttribute('aria-expanded') === 'false';
+      menuToggle.setAttribute('aria-expanded', newExpandedState.toString());
+    });
   };
 })();

@@ -702,6 +702,15 @@ module.exports = {
         },
       },
     },
+    typography: {
+      default: {
+        css: {
+          'ol > li::before': {
+            color: 'currentColor',
+          },
+        },
+      },
+    },
   },
   variants: {
     accessibility: ['responsive', 'focus'],
