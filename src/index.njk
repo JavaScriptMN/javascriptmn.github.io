@@ -33,21 +33,7 @@ changeFreq: daily
 <div class="container mx-auto px-2 mb-10">
   <div class="x-h-screen flex justify-center items-center">
     <div class="w-full">
-      <div class="mb-8">
-        <h2
-          class="inline-block bg-black text-white text-2xl font-bold px-4 mb-2 transform -rotate-1"
-        >
-          Upcoming
-        </h2>
-        <div class="bg-jsmn-yellow text-2xl font-bold p-4">
-          Eleventy
-          <small
-            >and the
-            <abbr title="Just Another Monstrosity">JAM</abbr> fad</small
-          >
-          <i>by Brian Mitchell and Ryan Rampersad</i>
-        </div>
-      </div>
+      {% include 'nextEvent.njk' %}
       <div>
         <div class="flex justify-end items-center mb-2">
           <h2

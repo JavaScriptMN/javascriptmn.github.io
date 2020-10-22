@@ -20,6 +20,18 @@ module.exports = function (eleventyConfig) {
     return `Eleventy ${eleventyVersion}`;
   });
 
+  eleventyConfig.addFilter('formatDateTime', function (date) {
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      weekday: 'long',
+      hour: 'numeric',
+      minute: 'numeric',
+      timeZoneName: 'short',
+    });
+  });
+
   eleventyConfig.addPlugin(inclusiveLangPlugin);
 
   if (process.env.ELEVENTY_ENV === 'production') {
