@@ -66,7 +66,7 @@
   </head>
   <body>
     {% include "header.njk" %}
-    <main role="main">{{ content | safe }}</main>
+    <main role="main" class="overflow-hidden">{{ content | safe }}</main>
     {% include "footer.njk" %}
 
     {% set js %}
