@@ -1,6 +1,6 @@
 {% set event = events | rejectattr('hidden') | first %}
 
-<div class="mb-8">
+<div class="mb-16">
   <h2
     class="inline-block bg-black text-white text-2xl font-bold px-4 mb-2 transform -rotate-1"
   >
@@ -20,7 +20,8 @@
         <time datetime="{{ event.date.toISOString() }}">
           {{ event.date | formatDateTime }}
         </time>
-        <br>
+      </p>
+      <p class="text-lg">
         {{ event.location }}
       </p>
       <p>
