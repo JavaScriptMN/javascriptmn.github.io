@@ -36,3 +36,83 @@
 .plc-4 > * {
   @apply pl-4;
 }
+
+/*
+=======================
+      Upcoming
+Call to action effects
+=======================
+*/
+
+:root {
+  /* Light Cornflower Blue */
+  --box-flap-color-1: #94cbe3;
+  /* English Red */
+  --box-flap-color-2: #b73f53;
+  /* Old Mauve (not used yet) */
+  --box-flap-color-3: #6b334a;
+
+  --box-flap-size: theme('spacing.16');
+  --box-flap-offset: theme('spacing.8');
+}
+
+.box-flap {
+  position: relative;
+}
+
+.box-flap-1,
+.box-flap-2 {
+  mix-blend-mode: multiply;
+  filter: none;
+  z-index: -1;
+  width: calc(100% + (var(--box-flap-size) * 2));
+  height: calc(100% + (var(--box-flap-size) * 2));
+  position: absolute;
+  display: block;
+  animation: flapping 10s ease-in-out infinite;
+  /* safari cannot handle calc + variable; use the tailwind/postcss fallback for now */
+  /* transform: translateX(calc(-1 * var(--box-flap-size))) translateY(calc(-1 * var(--box-flap-size))); */
+  transform: translateX(calc(-1 * theme('spacing.16')))
+    translateY(calc(-1 * theme('spacing.16')));
+}
+
+@keyframes flapping {
+  0%,
+  100% {
+    clip-path: polygon(
+      0 0,
+      calc(100% - var(--box-flap-offset)) calc(0% + var(--box-flap-offset)),
+      100% 100%,
+      calc(0% + var(--box-flap-offset)) calc(100% - var(--box-flap-offset))
+    );
+  }
+  50% {
+    clip-path: polygon(
+      calc(0% + var(--box-flap-offset)) calc(0% + var(--box-flap-offset)),
+      100% 0,
+      calc(100% - var(--box-flap-offset)) calc(100% - var(--box-flap-offset)),
+      0 100%
+    );
+  }
+}
+
+.box-flap-1 {
+  animation-delay: -5s;
+  background-color: var(--box-flap-color-1);
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--box-flap-offset)) calc(0% + var(--box-flap-offset)),
+    100% 100%,
+    calc(0% + var(--box-flap-offset)) calc(100% - var(--box-flap-offset))
+  );
+}
+
+.box-flap-2 {
+  background-color: var(--box-flap-color-2);
+  clip-path: polygon(
+    calc(0% + var(--box-flap-offset)) calc(0% + var(--box-flap-offset)),
+    100% 0,
+    calc(100% - var(--box-flap-offset)) calc(100% - var(--box-flap-offset)),
+    0 100%
+  );
+}

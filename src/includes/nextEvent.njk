@@ -7,24 +7,32 @@
     Upcoming
   </h2>
   {# next event #}
-  <div class="bg-jsmn-yellow text-2xl p-4" id="upcoming-event">
-    <h3 class="font-bold">{{ event.title }}</h3>
-    <p class="text-lg">
-      <time datetime="{{ event.date.toISOString() }}">
-        {{ event.date | formatDateTime }}
-      </time>
-      <br>
-      {{ event.location }}
-    </p>
-    <p>
-      <a href="{{ event.link }}" class="text-lg font-bold underline">Details & RSVP</a>
-    </p>
-  </div>
-  {# fallback #}
-  <div class="bg-jsmn-yellow text-2xl font-bold p-4 hidden"
-       id="upcoming-event-fallback">
-    <a href="https://www.meetup.com/javascriptmn/" class="underline">Check
-      Meetup.com for updates</a>
+  
+  <div class="box-flap">
+    {# box flaps for the special effect #}
+    <div class="box-flap-1"></div>
+    <div class="box-flap-2"></div>
+
+    {# regular content; javascript controls this #}
+    <div class="bg-jsmn-yellow p-4 shadow-lg" id="upcoming-event">
+      <h3 class="font-bold text-2xl">{{ event.title }}</h3>
+      <p class="text-lg">
+        <time datetime="{{ event.date.toISOString() }}">
+          {{ event.date | formatDateTime }}
+        </time>
+        <br>
+        {{ event.location }}
+      </p>
+      <p>
+        <a href="{{ event.link }}" class="text-lg font-bold underline">Details &amp; RSVP</a>
+      </p>
+    </div>
+    {# fallback #}
+    <div class="bg-jsmn-yellow text-2xl font-bold p-4 hidden"
+        id="upcoming-event-fallback">
+      <a href="https://www.meetup.com/javascriptmn/" class="underline">Check
+        Meetup.com for updates</a>
+    </div>
   </div>
 </div>
 
