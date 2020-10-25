@@ -3,7 +3,15 @@ module.exports = {
     require('tailwindcss'),
     require('autoprefixer'),
     ...(process.env.NODE_ENV === 'production'
-      ? [require(`postcss-clean`)]
+      ? [
+          require('postcss-clean')({
+            compatibility: {
+              properties: {
+                zeroUnits: false,
+              },
+            },
+          }),
+        ]
       : []),
   ],
 };
