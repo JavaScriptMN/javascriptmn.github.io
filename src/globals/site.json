@@ -10,10 +10,6 @@
   },
   "navigation": [
     {
-      "path": "/",
-      "text": "Home"
-    },
-    {
       "path": "/sponsors/",
       "text": "Sponsors"
     },
