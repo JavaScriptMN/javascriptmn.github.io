@@ -14,6 +14,10 @@
       "text": "Home"
     },
     {
+      "path": "/events/",
+      "text": "Events"
+    },
+    {
       "path": "/sponsors/",
       "text": "Sponsors"
     },
