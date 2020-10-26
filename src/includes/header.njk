@@ -4,7 +4,7 @@
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
         <button
           id="ope-let-me-get-this-for-ya"
-          class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
+          class="inline-flex items-center justify-center p-2 rounded-md border border-transparent text-gray-400 hover:text-white hover:border hover:border-jsmn-yellow focus:outline-none focus:border-white focus:text-white transition duration-150 ease-in-out"
           aria-label="Main menu"
           aria-expanded="false"
         >
@@ -68,11 +68,11 @@
         <div class="hidden sm:block sm:ml-6">
           <div class="flex">
             {% for link in site.navigation %}
-            <a
-              href="{{ link.path | url }}"
-              class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-gray-300 hover:text-white border-b-2 border-transparent hover:border-jsmn-yellow focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+              <a
+                href="{{ link.path | url }}"
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-gray-300 hover:text-white border-b-2 border-transparent hover:border-jsmn-yellow focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
               >{{ link.text }}</a
-            >
+              >
             {% endfor %}
           </div>
         </div>
@@ -82,11 +82,11 @@
   <div class="hidden sm:hidden" data-mobile-menu>
     <div class="px-2 pt-2 pb-3">
       {% for link in site.navigation %}
-      <a
-        href="{{ link.path | url }}"
-        class="mt-1 block px-3 py-2 text-base font-medium text-gray-300 hover:text-white border-l-4 border-transparent hover:border-jsmn-yellow focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+        <a
+          href="{{ link.path | url }}"
+          class="mt-1 block px-3 py-2 text-base font-medium text-gray-300 hover:text-white border-l-4 border-transparent hover:border-jsmn-yellow focus:outline-none focus:text-white focus:border-white transition duration-150 ease-in-out"
         >{{ link.text }}</a
-      >
+        >
       {% endfor %}
     </div>
   </div>
