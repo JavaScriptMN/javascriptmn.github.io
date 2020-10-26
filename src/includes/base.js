@@ -27,4 +27,19 @@
       menuToggle.setAttribute('aria-expanded', newExpandedState.toString());
     });
   };
+
+  function unregister() {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.ready
+        .then((registration) => {
+          registration.unregister();
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
+    }
+  }
+
+  // unregister any existing service workers
+  unregister();
 })();
