@@ -1,6 +1,6 @@
 {% set event = events | rejectattr('hidden') | first %}
 
-<div class="mb-16">
+<div class="mb-20">
   <h2
     class="inline-block bg-black text-white text-2xl font-bold px-4 mb-2 transform -rotate-1"
   >
@@ -25,13 +25,13 @@
         {{ event.location }}
       </p>
       <p>
-        <a href="{{ event.link }}" class="text-lg font-bold underline">Details &amp; RSVP</a>
+        <a href="{{ event.link }}" class="text-lg font-bold hover:underline">Details &amp; RSVP</a>
       </p>
     </div>
     {# fallback #}
     <div class="bg-jsmn-yellow text-2xl font-bold p-4 hidden"
         id="upcoming-event-fallback">
-      <a href="https://www.meetup.com/javascriptmn/" class="underline">Check
+      <a href="https://www.meetup.com/javascriptmn/" class="hover:underline">Check
         Meetup.com for updates</a>
     </div>
   </div>

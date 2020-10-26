@@ -4,12 +4,13 @@
       class="flex justify-center items-start space-x-16 divide-x-2 divide-gray-100 divide"
     >
       <div class="px-2">
-        <h5
+        <p
           class="uppercase inline-block bg-black text-white font-bold px-4 mb-2 transform -rotate-1"
+          id="footer-meetup"
         >
           Meetup
-        </h5>
-        <ul>
+        </p>
+        <ul aria-describedby="footer-meetup">
           {% for link in site.navigation %}
           <li>
             <a class="hover:underline" href="{{ link.path | url }}"
@@ -20,12 +21,13 @@
         </ul>
       </div>
       <div class="px-2">
-        <h5
+        <p
           class="uppercase inline-block bg-black text-white font-bold px-4 mb-2 transform rotate-1"
+          id="footer-connect"
         >
           Connect
-        </h5>
-        <ul>
+        </p>
+        <ul aria-describedby="footer-connect">
           {% for link in site.connect %}
           <li>
             <a class="hover:underline" href="{{ link.href }}"

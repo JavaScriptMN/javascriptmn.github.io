@@ -101,7 +101,7 @@ changeFreq: daily
           <h2
             class="inline-block bg-black text-white text-2xl font-bold px-4 transform -rotate-1"
           >
-            Speaking
+            Speak
           </h2>
         </div>
         <div
@@ -142,7 +142,7 @@ changeFreq: daily
           {% for section in sponsors %}
           {% if section.showOnHome === true %}
           <div class="w-2/3 mx-auto mb-4">
-            <h3 class="font-bold text-2xl">{{ section.section }}</h3>
+            <h3 class="font-bold text-2xl">{{ section.section | safe }}</h3>
             <div class="grid sm:grid-cols-4 sm:gap-2 grid-cols-none space-y-4 sm:space-y-0">
               {% for sponsor in section.sponsors %}
               <div class="flex justify-center items-center">
@@ -150,7 +150,7 @@ changeFreq: daily
                   href="{{ sponsor.href }}"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="flex justify-center items-center shadow transition-all border border-gray-200 hover:border-gray-400 w-full p-4"
+                  class="flex justify-center items-center shadow transition-all border border-gray-200 hover:border-gray-600 w-full p-4"
                 >
                   <img
                     src="{{ sponsor.imgSrc | url }}"

@@ -1,7 +1,7 @@
 [
   {
     "showOnHome": true,
-    "section": "Host 🌎",
+    "section": "Host <span role=\"img\" aria-label=\"earth\">🌎</span>",
     "sponsors": [
       {
         "imgSrc": "/sponsors/logo-wework.svg",
@@ -12,7 +12,7 @@
   },
   {
     "showOnHome": true,
-    "section": "Diamond 💎",
+    "section": "Diamond <span role=\"img\" aria-label=\"diamond\">💎</span>",
     "sponsors": [
       {
         "imgSrc": "/sponsors/logo-twilio.svg",
@@ -38,12 +38,12 @@
   },
   {
     "showOnHome": false,
-    "section": "Gold 🥇",
+    "section": "Gold <span role=\"img\" aria-label=\"gold medal\">🥇</span>",
     "sponsors": []
   },
   {
     "showOnHome": false,
-    "section": "Silver 🥈",
+    "section": "Silver <span role=\"img\" aria-label=\"silver medal\">🥈</span>",
     "sponsors": []
   }
 ]

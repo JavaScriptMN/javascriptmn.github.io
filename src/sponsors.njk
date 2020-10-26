@@ -3,7 +3,7 @@ layout: base
 title: Sponsors
 ---
 
-<div class="container mx-auto px-2 my-8">
+<div class="container mx-auto p-2 my-8">
   <div class="x-h-screen flex justify-center items-center">
     <div class="w-full">
       <div class="mb-8">
@@ -22,7 +22,7 @@ title: Sponsors
         <div class="border-jsmn-yellow border-4 p-4 divide-y divide-gray-200">
           {% for section in sponsors %}
           <div class="py-4">
-            <h2 class="text-3xl font-bold">{{ section.section }}</h2>
+            <h2 class="text-3xl font-bold">{{ section.section | safe }}</h2>
             <ul class="grid sm:grid-cols-3 sm:gap-2 grid-cols-none">
               {% for sponsor in section.sponsors %}
               <li class="flex justify-center items-center">
@@ -30,7 +30,7 @@ title: Sponsors
                   href="{{ sponsor.href }}"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="flex justify-center items-center shadow transition-all border border-gray-200 hover:border-gray-400 w-full p-4 m-2"
+                  class="flex justify-center items-center shadow border border-gray-200 hover:border-gray-600 w-full p-4 m-2"
                 >
                   <img
                     src="{{ sponsor.imgSrc | url }}"
@@ -42,10 +42,10 @@ title: Sponsors
               </li>
               {% else %}
               <li
-                class="flex justify-center items-center p-4 m-2 border border-gray-200 shadow"
+                class="flex justify-center items-center p-4 m-2 border border-gray-200 hover:border-gray-600 shadow"
               >
                 <a
-                  class="transition-all transform hover:scale-110 h-32 w-full flex justify-center items-center"
+                  class="transition-all transform h-32 w-full flex justify-center items-center"
                   href="{{ '/sponsorship-opportunities/' | url }}"
                 >
                   <span class="text-lg font-bold">Become a sponsor →</span>
