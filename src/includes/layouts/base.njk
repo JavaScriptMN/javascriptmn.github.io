@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="{% eleventyVersion %}">
+    <meta
+      name="description"
+      content="{{ description if description else site.description }}"
+    />
+    <title>
+      {{ title }}{{ " | " + site.name if title !== site.name }}
+    </title>
+
+    <!-- htmlmin:ignore -->
+    <!--
+		      _                  ____            _       _     __  __ _   _ 
+		     | | __ ___   ____ _/ ___|  ___ _ __(_)_ __ | |_  |  \/  | \ | |
+		  _  | |/ _` \ \ / / _` \___ \ / __| '__| | '_ \| __| | |\/| |  \| |
+		 | |_| | (_| |\ V / (_| |___) | (__| |  | | |_) | |_  | |  | | |\  |
+		  \___/ \__,_| \_/ \__,_|____/ \___|_|  |_| .__/ \__| |_|  |_|_| \_|
+		                                          |_|                       
+    -->
+    <!-- htmlmin:ignore -->
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ '/apple-touch-icon.png' | url }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ '/favicon-32x32.png' | url }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ '/favicon-16x16.png' | url }}"
+    />
+    <link rel="manifest" href="{{ '/site.webmanifest' | url }}" />
+    <link rel="stylesheet" href="{{ '/css/tailwind.include.css' | url }}" />
+
+    {# social meta tags #}
+    <meta property="og:title"
+          content="{{ title }}{{ " | " + site.name if title !== site.name }}">
+    <meta property="og:description"
+          content="{{ description if description else site.description }}">
+    <meta property="og:image"
+          content="{{ site.url }}{{ '/JSMN-opaque-js.png' | url }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta name="twitter:title"
+          content="{{ title }}{{ " | " + site.name if title !== site.name }}">
+    <meta name="twitter:description"
+          content="{{ description if description else site.description }}">
+    <meta name="twitter:image"
+          content="{{ site.url }}{{ '/JSMN-opaque-js.png' | url }}">
+    <meta name="twitter:image:alt" content="{{ site.name }} logo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta name="twitter:site" content="{{ site.author.handle }}">
+  </head>
+  <body>
+    {% include "header.njk" %}
+    <main role="main" class="overflow-hidden">{{ content | safe }}</main>
+    {% include "footer.njk" %}
+
+    {% set js %}
+      {% include "base.js" %}
+    {% endset %}
+    <script type="text/javascript">
+      {{ js | jsmin | safe }}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[data-animated-logo] path {
+  stroke-dasharray: 17364.90625;
+  stroke-dashoffset: 17364.90625;
+  animation-name: animated-logo-animation;
+  animation-direction: normal;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animated-logo-animation {
+  from {
+    stroke-dashoffset: 17364.90625;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    animation-play-state: paused !important;
+    transition: none !important;
+  }
+}
+
+.special-bg {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23e5cf5f' fill-opacity='0.10' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.plc-4 > * {
+  @apply pl-4;
+}
+
+/*
+=======================
+      Upcoming
+Call to action effects
+=======================
+*/
+
+:root {
+  /* Light Cornflower Blue */
+  --box-flap-color-1: theme('colors.jsmn-blue');
+  /* English Red */
+  --box-flap-color-2: theme('colors.jsmn-red');
+  /* Old Mauve (not used yet) */
+  --box-flap-color-3: theme('colors.jsmn-mauve');
+
+  --box-flap-size: theme('spacing.16');
+  --box-flap-offset: theme('spacing.8');
+}
+
+.box-flap {
+  /*
+    Box flap inspiration, by kang, 2019.
+    https://codepen.io/inyoung1/pen/gZVdeX
+  */
+  position: relative;
+}
+
+.box-flap-1,
+.box-flap-2 {
+  mix-blend-mode: multiply;
+  filter: none;
+  z-index: -1;
+  width: calc(100% + (var(--box-flap-size) * 2));
+  height: calc(100% + (var(--box-flap-size) * 2));
+  position: absolute;
+  display: block;
+  animation: flapping 10s ease-in-out infinite;
+  /* safari cannot handle calc + variable; use the tailwind/postcss fallback for now */
+  /* transform: translateX(calc(-1 * var(--box-flap-size))) translateY(calc(-1 * var(--box-flap-size))); */
+  transform: translateX(calc(-1 * theme('spacing.16')))
+    translateY(calc(-1 * theme('spacing.16')));
+}
+
+@keyframes flapping {
+  0%,
+  100% {
+    clip-path: polygon(
+      0 0,
+      calc(100% - var(--box-flap-offset)) calc(0% + var(--box-flap-offset)),
+      100% 100%,
+      calc(0% + var(--box-flap-offset)) calc(100% - var(--box-flap-offset))
+    );
+  }
+  50% {
+    clip-path: polygon(
+      calc(0% + var(--box-flap-offset)) calc(0% + var(--box-flap-offset)),
+      100% 0,
+      calc(100% - var(--box-flap-offset)) calc(100% - var(--box-flap-offset)),
+      0 100%
+    );
+  }
+}
+
+.box-flap-1 {
+  animation-delay: -5s;
+  background-color: var(--box-flap-color-1);
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--box-flap-offset)) calc(0% + var(--box-flap-offset)),
+    100% 100%,
+    calc(0% + var(--box-flap-offset)) calc(100% - var(--box-flap-offset))
+  );
+}
+
+.box-flap-2 {
+  background-color: var(--box-flap-color-2);
+  clip-path: polygon(
+    calc(0% + var(--box-flap-offset)) calc(0% + var(--box-flap-offset)),
+    100% 0,
+    calc(100% - var(--box-flap-offset)) calc(100% - var(--box-flap-offset)),
+    0 100%
+  );
+}

@@ -1,0 +1,45 @@
+<footer class="border-t-2 border-black mt-10">
+  <div class="container mx-auto p-2 pt-4">
+    <div
+      class="flex justify-center items-start space-x-16 divide-x-2 divide-gray-100 divide"
+    >
+      <div class="px-2">
+        <p
+          class="uppercase inline-block bg-black text-white font-bold px-4 mb-2 transform -rotate-1"
+          id="footer-meetup"
+        >
+          Meetup
+        </p>
+        <ul aria-describedby="footer-meetup">
+          {% for link in site.navigation %}
+          <li>
+            <a class="hover:underline" href="{{ link.path | url }}"
+              >{{ link.text }}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="px-2">
+        <p
+          class="uppercase inline-block bg-black text-white font-bold px-4 mb-2 transform rotate-1"
+          id="footer-connect"
+        >
+          Connect
+        </p>
+        <ul aria-describedby="footer-connect">
+          {% for link in site.connect %}
+          <li>
+            <a class="hover:underline" href="{{ link.href }}" rel="noopener noreferrer"
+              >{{ link.text }}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-sm py-8">
+      <p>© {% year %} JavaScriptMN</p>
+    </div>
+  </div>
+</footer>

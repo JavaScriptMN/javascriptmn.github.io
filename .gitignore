@@ -1,12 +1,13 @@
 # Project dependencies
 .cache
 node_modules
-yarn-error.log
 
 # Build directory
-/public
+/dist
 .DS_Store
 
 # IDE specific
 .idea/
 .vscode/
+
+*.include.css
