@@ -14,8 +14,8 @@
     "start": "run-p start:css start:js",
     "prebuild": "rimraf dist",
     "build": "run-s build:css build:js",
-    "start:js": "cross-env ELEVENTY_ENV=development eleventy --serve",
-    "build:js": "cross-env ELEVENTY_ENV=production eleventy",
+    "start:js": "cross-env ELEVENTY_ENV=development TZ=America/Chicago eleventy --serve",
+    "build:js": "cross-env ELEVENTY_ENV=production TZ=America/Chicago eleventy",
     "start:css": "postcss ./src/css/tailwind.css -o ./src/css/tailwind.include.css -w",
     "build:css": "postcss ./src/css/tailwind.css -o ./src/css/tailwind.include.css --env production"
   },
