@@ -25,6 +25,10 @@ module.exports = {
       white: '#fff',
 
       'jsmn-yellow': '#e5cf5f',
+      'jsmn-black': '#242323',
+      'jsmn-blue': '#94cbe3',
+      'jsmn-red': '#b73f53',
+      'jsmn-mauve': '#6b334a',
 
       gray: {
         100: '#f7fafc',

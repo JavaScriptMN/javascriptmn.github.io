@@ -46,17 +46,21 @@ Call to action effects
 
 :root {
   /* Light Cornflower Blue */
-  --box-flap-color-1: #94cbe3;
+  --box-flap-color-1: theme('colors.jsmn-blue');
   /* English Red */
-  --box-flap-color-2: #b73f53;
+  --box-flap-color-2: theme('colors.jsmn-red');
   /* Old Mauve (not used yet) */
-  --box-flap-color-3: #6b334a;
+  --box-flap-color-3: theme('colors.jsmn-mauve');
 
   --box-flap-size: theme('spacing.16');
   --box-flap-offset: theme('spacing.8');
 }
 
 .box-flap {
+  /*
+    Box flap inspiration, by kang, 2019.
+    https://codepen.io/inyoung1/pen/gZVdeX
+  */
   position: relative;
 }
 
