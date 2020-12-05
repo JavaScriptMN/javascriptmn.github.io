@@ -1,10 +1,22 @@
+/**
+ * @typedef JSMNEvent
+ * @type {object}
+ * @property {string} title - event title.
+ * @property {Date} date - event date, be sure to include timezone info.
+ * @property {string} link - link to meetup/event page.
+ * @property {string} location - location of event.
+ * @property {boolean} [hidden] - hide it from the site if true.
+ */
+
+/**
+ * @type {JSMNEvent[]}
+ */
 module.exports = [
   {
-    title: 'November Meetup',
-    date: new Date('2020-11-25T18:30-06:00'),
-    link: 'https://www.meetup.com/JavaScriptMN/',
+    title: 'End of the Year Event: Pizza Night',
+    date: new Date('2020-12-09T18:00-06:00'),
+    link: 'https://www.meetup.com/JavaScriptMN/events/hmzgxrybcpbhc/',
     location: 'Virtual',
-    hidden: true,
   },
   {
     title: 'October Event: Shalanah Dawson, Ryan Rampersad, Brian Mitchell',
