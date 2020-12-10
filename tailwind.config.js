@@ -32,6 +32,9 @@ module.exports = {
         'jsmn-red': '#b73f53',
         'jsmn-mauve': '#6b334a',
       },
+      rotate: {
+        '-25': '-25deg',
+      },
     },
   },
   variants: {

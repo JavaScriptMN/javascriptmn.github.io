@@ -4,12 +4,15 @@ module.exports = {
     require('autoprefixer'),
     ...(process.env.NODE_ENV === 'production'
       ? [
-          require('postcss-clean')({
-            compatibility: {
-              properties: {
-                zeroUnits: false,
+          require('cssnano')({
+            preset: [
+              'default',
+              {
+                calc: {
+                  preserve: true,
+                },
               },
-            },
+            ],
           }),
         ]
       : []),

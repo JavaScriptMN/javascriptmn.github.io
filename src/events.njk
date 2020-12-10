@@ -14,7 +14,7 @@ title: Events
     Past
   </h2>
 
-  <div class="divide-y divide-black divide-solid">
+  <div class="divide-y divide-gray-400 divide-solid">
     {% for event in events | rejectattr('hidden') %}
       <article class="py-4" data-past-event>
         <h3 class="font-bold text-2xl">{{ event.title }}</h3>
