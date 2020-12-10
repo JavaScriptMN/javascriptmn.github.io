@@ -10,7 +10,7 @@
         >
           Meetup
         </p>
-        <ul aria-describedby="footer-meetup">
+        <ul aria-describedby="footer-meetup" class="space-y-2 sm:space-y-0">
           {% for link in site.navigation %}
           <li>
             <a class="hover:underline" href="{{ link.path | url }}"
@@ -27,7 +27,7 @@
         >
           Connect
         </p>
-        <ul aria-describedby="footer-connect">
+        <ul aria-describedby="footer-connect" class="space-y-2 sm:space-y-0">
           {% for link in site.connect %}
           <li>
             <a class="hover:underline" href="{{ link.href }}" rel="noopener noreferrer"
