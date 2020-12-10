@@ -35,7 +35,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      rotate: ['active', 'group-hover', 'hover'],
+    },
   },
   plugins: [require('@tailwindcss/typography')],
 };
