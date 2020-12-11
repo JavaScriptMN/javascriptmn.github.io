@@ -7,17 +7,19 @@ changeFreq: daily
 {# primary content #}
 <div class="special-bg">
   <div class="container mx-auto px-2 py-10 mb-10">
-    <div class="x-h-screen flex justify-center items-center">
+    <div class="flex justify-center items-center">
       <div>
-        <div class="text-center flex flex-wrap sm:flex-no-wrap justify-center px-4 sm:px-0">
+        <div
+          class="text-center flex flex-wrap sm:flex-nowrap justify-center px-4 sm:px-0"
+        >
           <div class="w-full sm:w-1/2">
             <div class="pl-8 sm:pl-16" data-animated-logo>
               {% include "_logo.svg" %}
             </div>
           </div>
           <div class="w-full sm:w-1/2 self-center">
-            <div class="text-4xl font-bold"><h1>JavaScriptMN</h1></div>
-            <p class="text-xl">
+            <div class="text-4xl leading-normal font-bold"><h1>JavaScriptMN</h1></div>
+            <p class="text-xl leading-normal">
               A monthly meetup for anyone interested in JavaScript and related
               technologies in the Twin Cities.
             </p>
@@ -37,13 +39,13 @@ changeFreq: daily
       <div>
         <div class="flex justify-end items-center mb-2">
           <h2
-            class="inline-block bg-black text-white text-2xl font-bold px-4 transform rotate-1"
+            class="inline-block bg-black text-white text-2xl font-bold px-4 leading-normal transform rotate-1"
           >
             Links
           </h2>
         </div>
         <ul
-          class="flex justify-center sm:justify-end items-center space-y-2 sm:space-y-0 sm:space-x-2 flex-wrap sm:flex-no-wrap"
+          class="flex justify-center sm:justify-end items-center space-y-2 sm:space-y-0 sm:space-x-2 flex-wrap sm:flex-nowrap"
         >
           {% for link in actionLinks %}
           <li class="w-full sm:w-auto">
@@ -60,7 +62,6 @@ changeFreq: daily
   </div>
 </div>
 
-
 {# location, speaking #}
 
 <div class="container mx-auto px-2 mb-10">
@@ -68,12 +69,12 @@ changeFreq: daily
     <div class="w-full">
       <section class="mb-8">
         <h2
-          class="inline-block bg-black text-white text-2xl font-bold px-4 mb-2 transform -rotate-1"
+          class="inline-block bg-black text-white text-2xl font-bold px-4 leading-normal mb-2 transform -rotate-1"
         >
           Location
         </h2>
         <div
-          class="border-jsmn-yellow border-4 p-4 flex justify-between items-center flex-wrap sm:flex-no-wrap space-y-4 sm:space-y-0"
+          class="border-jsmn-yellow border-4 p-4 flex justify-between items-center flex-wrap sm:flex-nowrap space-y-4 sm:space-y-0"
         >
           <div class="w-full sm:w-1/2">
             <p class="text-lg leading-7">
@@ -99,13 +100,13 @@ changeFreq: daily
       <section class="mb-8">
         <div class="flex justify-start items-center mb-2">
           <h2
-            class="inline-block bg-black text-white text-2xl font-bold px-4 transform -rotate-1"
+            class="inline-block bg-black text-white text-2xl font-bold px-4 leading-normal transform -rotate-1"
           >
             Speak
           </h2>
         </div>
         <div
-          class="border-jsmn-yellow border-4 p-4 flex justify-between items-center flex-wrap sm:flex-no-wrap space-y-4 sm:space-y-0"
+          class="border-jsmn-yellow border-4 p-4 flex justify-between items-center flex-wrap sm:flex-nowrap space-y-4 sm:space-y-0"
         >
           <div>
             <h3 class="text-2xl font-bold">Interested in speaking?</h3>
@@ -116,10 +117,11 @@ changeFreq: daily
           </div>
           <div class="w-full sm:w-auto">
             <a
-              class="block text-xl font-semibold border-2 border-black p-4 hover:bg-jsmn-yellow transition-all duration-100"
+              class="text-xl font-semibold border-2 border-black p-4 hover:bg-jsmn-yellow transition-all duration-100 flex justify-evenly items-center"
               href="{{ '/speak/' | url }}"
-              >Learn More</a
             >
+              <span>Speak at JSMN!</span>
+            </a>
           </div>
         </div>
       </section>
@@ -128,7 +130,7 @@ changeFreq: daily
       <section class="mb-8">
         <div class="flex justify-between items-center mb-2">
           <h2
-            class="inline-block bg-black text-white text-2xl font-bold px-4 transform -rotate-1"
+            class="inline-block bg-black text-white text-2xl font-bold px-4 leading-normal transform -rotate-1"
           >
             Sponsors
           </h2>
@@ -139,11 +141,12 @@ changeFreq: daily
           </p>
         </div>
         <div class="border-jsmn-yellow border-4 p-4">
-          {% for section in sponsors %}
-          {% if section.showOnHome === true %}
+          {% for section in sponsors %} {% if section.showOnHome === true %}
           <div class="w-2/3 mx-auto mb-4">
             <h3 class="font-bold text-2xl">{{ section.section | safe }}</h3>
-            <div class="grid sm:grid-cols-4 sm:gap-2 grid-cols-none space-y-4 sm:space-y-0">
+            <div
+              class="grid sm:grid-cols-4 sm:gap-2 grid-cols-none space-y-4 sm:space-y-0"
+            >
               {% for sponsor in section.sponsors %}
               <div class="flex justify-center items-center">
                 <a
@@ -163,8 +166,7 @@ changeFreq: daily
               {% endfor %}
             </div>
           </div>
-          {% endif %}
-          {% endfor %}
+          {% endif %} {% endfor %}
         </div>
       </section>
     </div>
