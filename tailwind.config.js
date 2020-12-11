@@ -17,7 +17,7 @@ module.exports = {
           'monospace',
         ],
         serif: [
-          '"New York"',
+          '"New York Medium"',
           'Georgia',
           'Cambria',
           '"Times New Roman"',
@@ -31,9 +31,6 @@ module.exports = {
         'jsmn-blue': '#94cbe3',
         'jsmn-red': '#b73f53',
         'jsmn-mauve': '#6b334a',
-      },
-      rotate: {
-        '-25': '-25deg',
       },
     },
   },
