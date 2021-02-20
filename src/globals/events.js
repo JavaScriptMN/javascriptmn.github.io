@@ -13,6 +13,12 @@
  */
 module.exports = [
   {
+    title: 'February Event: Show and Tell',
+    date: new Date('2021-02-24T18:00-06:00'),
+    link: 'https://www.meetup.com/JavaScriptMN/events/hmzgxryccdbgc/',
+    location: 'Virtual',
+  },
+  {
     title: 'End of the Year Event: Pizza Night',
     date: new Date('2020-12-09T18:00-06:00'),
     link: 'https://www.meetup.com/JavaScriptMN/events/hmzgxrybcpbhc/',
