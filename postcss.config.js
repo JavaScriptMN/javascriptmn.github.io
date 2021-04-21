@@ -5,14 +5,7 @@ module.exports = {
     ...(process.env.NODE_ENV === 'production'
       ? [
           require('cssnano')({
-            preset: [
-              'default',
-              {
-                calc: {
-                  preserve: true,
-                },
-              },
-            ],
+            preset: ['default'],
           }),
         ]
       : []),
