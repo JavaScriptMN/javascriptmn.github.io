@@ -50,23 +50,23 @@ module.exports = function (eleventyConfig) {
     });
   }
 
-  eleventyConfig.addNunjucksAsyncFilter('jsmin', async function (
-    code,
-    callback
-  ) {
-    if (process.env.ELEVENTY_ENV === 'production') {
-      try {
-        const minified = await minify(code);
-        callback(null, minified.code);
-      } catch (err) {
-        console.error('Terser error: ', err);
-        // Fail gracefully.
+  eleventyConfig.addNunjucksAsyncFilter(
+    'jsmin',
+    async function (code, callback) {
+      if (process.env.ELEVENTY_ENV === 'production') {
+        try {
+          const minified = await minify(code);
+          callback(null, minified.code);
+        } catch (err) {
+          console.error('Terser error: ', err);
+          // Fail gracefully.
+          callback(null, code);
+        }
+      } else {
         callback(null, code);
       }
-    } else {
-      callback(null, code);
     }
-  });
+  );
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
