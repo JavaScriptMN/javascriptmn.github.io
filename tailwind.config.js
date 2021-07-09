@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   purge: {
     content: ['./src/**/*.{html,njk,svg,md,js}'],
   },
@@ -46,5 +47,5 @@ module.exports = {
 
 
 font mono
-      
+
 */
