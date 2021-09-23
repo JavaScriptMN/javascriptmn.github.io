@@ -15,7 +15,7 @@ module.exports = [
   {
     title: 'September Event: Show and Tell',
     date: new Date('2021-09-29T18:00-05:00'),
-    link: 'https://www.meetup.com/JavaScriptMN/events/qltnfsycclbhc/',
+    link: 'https://www.meetup.com/JavaScriptMN/events/qltnfsyccmbmc/',
     location: 'Virtual',
   },
   {
