@@ -13,7 +13,7 @@
  */
 module.exports = [
   {
-    title: 'November/December Event: Show and Tell',
+    title: 'November/December Event: Overview of Firebase in Vue - Craig Fisk',
     date: new Date('2021-12-15T18:00-06:00'),
     link: 'https://www.meetup.com/JavaScriptMN/events/qltnfsyccpbgc/',
     location: 'Virtual',
