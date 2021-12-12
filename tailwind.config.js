@@ -1,9 +1,5 @@
 module.exports = {
-  mode: 'jit',
-  purge: {
-    content: ['./src/**/*.{html,njk,svg,md,js}'],
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: ['./src/**/*.{html,njk,svg,md,js}'],
   theme: {
     extend: {
       fontFamily: {
@@ -35,17 +31,5 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {
-      rotate: ['active', 'group-hover', 'hover'],
-    },
-  },
   plugins: [require('@tailwindcss/typography')],
 };
-
-/*
-
-
-font mono
-
-*/
