@@ -1,15 +1,15 @@
-<nav class="bg-jsmn-black shadow-md relative">
-  <div class="container mx-auto px-2 sm:px-6 lg:px-8">
+<nav class="relative shadow-md bg-jsmn-black">
+  <div class="container px-2 mx-auto sm:px-6 lg:px-8">
     <div class="relative flex items-center justify-between h-16">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
         <button
           id="ope-let-me-get-this-for-ya"
-          class="inline-flex items-center justify-center p-2 rounded-md border border-transparent text-gray-400 hover:text-white hover:border hover:border-jsmn-yellow focus:outline-none focus:border-white focus:text-white transition duration-150 ease-in-out"
+          class="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out border border-transparent rounded-md hover:text-white hover:border hover:border-jsmn-yellow focus:outline-none focus:border-white focus:text-white"
           aria-label="Main menu"
           aria-expanded="false"
         >
           <svg
-            class="block h-6 w-6"
+            class="block w-6 h-6"
             data-menu-button
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -25,7 +25,7 @@
             />
           </svg>
           <svg
-            class="hidden h-6 w-6"
+            class="hidden w-6 h-6"
             data-close-button
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -43,10 +43,10 @@
         </button>
       </div>
       <div
-        class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between"
+        class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-between"
       >
-        <div class="flex-shrink-0 self-center">
-          <a href="{{ '/' | url }}" class="flex md:hidden w-auto">
+        <div class="self-center flex-shrink-0">
+          <a href="{{ '/' | url }}" class="flex w-auto md:hidden">
             <img
               class="h-8"
               src="{{ '/jsmn-logo.svg' | url }}"
@@ -55,22 +55,22 @@
           </a>
           <a
             href="{{ '/' | url }}"
-            class="hidden md:flex items-center w-auto"
+            class="items-center hidden w-auto md:flex"
           >
             <img
-              class="h-8 block"
+              class="block h-8"
               src="{{ '/jsmn-logo.svg' | url }}"
               alt="{{ site.name }} logo"
             />
-            <span class="text-white font-bold block pl-4">{{ site.name }}</span>
+            <span class="block pl-4 font-bold text-white">{{ site.name }}</span>
           </a>
         </div>
         <div class="hidden sm:block sm:ml-6">
-          <div class="flex">
+          <div class="flex items-center space-x-4">
             {% for link in site.navigation %}
               <a
                 href="{{ link.path | url }}"
-                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-gray-300 hover:text-white border-b-2 border-transparent hover:border-jsmn-yellow focus:outline-none focus:text-white focus:border-white transition duration-150 ease-in-out"
+                class="px-2 py-2 text-xs font-medium leading-5 text-center text-gray-300 transition duration-150 ease-in-out border-b-2 border-transparent lg:text-sm hover:text-white hover:border-jsmn-yellow focus:outline-none focus:text-white focus:border-white"
               >{{ link.text }}</a
               >
             {% endfor %}
@@ -84,7 +84,7 @@
       {% for link in site.navigation %}
         <a
           href="{{ link.path | url }}"
-          class="mt-1 block px-3 py-2 text-base font-medium text-gray-300 hover:text-white border-l-4 border-transparent hover:border-jsmn-yellow focus:outline-none focus:text-white focus:border-white transition duration-150 ease-in-out"
+          class="block px-3 py-2 mt-1 text-base font-medium text-gray-300 transition duration-150 ease-in-out border-l-4 border-transparent hover:text-white hover:border-jsmn-yellow focus:outline-none focus:text-white focus:border-white"
         >{{ link.text }}</a
         >
       {% endfor %}
