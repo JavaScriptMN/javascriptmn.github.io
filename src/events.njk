@@ -3,13 +3,13 @@ layout: base
 title: Events
 ---
 
-<div class="container mx-auto mt-8 p-2">
-  <h1 class="text-4xl font-bold mb-8">Events</h1>
+<div class="container p-2 mx-auto mt-8">
+  <h1 class="mb-8 text-4xl font-bold">Events</h1>
 
   {% include "nextEvent.njk" %}
 
   <h2
-    class="inline-block bg-black text-white text-2xl font-bold px-4 leading-normal mb-2 transform -rotate-1"
+    class="inline-block px-4 mb-2 text-2xl font-bold leading-normal text-white transform bg-black shadow -rotate-1"
   >
     Past
   </h2>
@@ -17,7 +17,7 @@ title: Events
   <div class="divide-y divide-gray-400 divide-solid">
     {% for event in events | rejectattr('hidden') %}
       <article class="py-4" data-past-event>
-        <h3 class="font-bold text-2xl">{{ event.title }}</h3>
+        <h3 class="text-2xl font-bold">{{ event.title }}</h3>
         <p class="text-lg">
           <time datetime="{{ event.date.toISOString() }}">
             {{ event.date | formatDateTime }}
