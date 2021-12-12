@@ -6,19 +6,19 @@ changeFreq: daily
 
 {# primary content #}
 <div class="special-bg">
-  <div class="container mx-auto px-2 py-10 mb-10">
-    <div class="flex justify-center items-center">
+  <div class="container px-2 py-10 mx-auto mb-10">
+    <div class="flex items-center justify-center">
       <div>
         <div
-          class="text-center flex flex-wrap sm:flex-nowrap justify-center px-4 sm:px-0"
+          class="flex flex-wrap justify-center px-4 text-center sm:flex-nowrap sm:px-0"
         >
           <div class="w-full sm:w-1/2">
             <div class="pl-8 sm:pl-16" data-animated-logo>
               {% include "_logo.svg" %}
             </div>
           </div>
-          <div class="w-full sm:w-1/2 self-center">
-            <div class="text-4xl leading-normal font-bold"><h1>JavaScriptMN</h1></div>
+          <div class="self-center w-full sm:w-1/2">
+            <div class="text-4xl font-bold leading-normal"><h1>JavaScriptMN</h1></div>
             <p class="text-xl leading-normal">
               A monthly meetup for anyone interested in JavaScript and related
               technologies in the Twin Cities.
@@ -32,25 +32,25 @@ changeFreq: daily
 
 {# the next section #}
 
-<div class="container mx-auto px-2 mb-10">
-  <div class="x-h-screen flex justify-center items-center">
+<div class="container px-2 mx-auto mb-10">
+  <div class="flex items-center justify-center x-h-screen">
     <div class="w-full">
       {% include 'nextEvent.njk' %}
       <div>
-        <div class="flex justify-end items-center mb-2">
+        <div class="flex items-center justify-start mb-2 sm:justify-end">
           <h2
-            class="inline-block bg-black text-white text-2xl font-bold px-4 leading-normal transform rotate-1"
+            class="inline-block px-4 text-2xl font-bold leading-normal text-white transform bg-black shadow -rotate-1 sm:rotate-1"
           >
             Links
           </h2>
         </div>
         <ul
-          class="flex justify-center sm:justify-end items-center space-y-2 sm:space-y-0 sm:space-x-2 flex-wrap sm:flex-nowrap"
+          class="flex flex-wrap items-center justify-center space-y-2 sm:justify-end sm:space-y-0 sm:space-x-2 sm:flex-nowrap"
         >
           {% for link in actionLinks %}
           <li class="w-full sm:w-auto">
             <a
-              class="block text-xl font-semibold border-2 border-black p-4 hover:bg-jsmn-yellow transition-all duration-100"
+              class="block p-4 text-xl font-semibold transition-all duration-100 border-2 border-black hover:bg-jsmn-yellow"
               href="{{ link.href }}"
               >{{ link.text }}</a
             >
@@ -64,17 +64,17 @@ changeFreq: daily
 
 {# location, speaking #}
 
-<div class="container mx-auto px-2 mb-10">
-  <div class="x-h-screen flex justify-center items-center">
+<div class="container px-2 mx-auto mb-10">
+  <div class="flex items-center justify-center x-h-screen">
     <div class="w-full">
       <section class="mb-8">
         <h2
-          class="inline-block bg-black text-white text-2xl font-bold px-4 leading-normal mb-2 transform -rotate-1"
+          class="inline-block px-4 mb-2 text-2xl font-bold leading-normal text-white transform bg-black shadow -rotate-1"
         >
           Location
         </h2>
         <div
-          class="border-jsmn-yellow border-4 p-4 flex justify-between items-center flex-wrap sm:flex-nowrap space-y-4 sm:space-y-0"
+          class="flex flex-wrap items-center justify-between p-4 space-y-4 border-4 border-jsmn-yellow sm:flex-nowrap sm:space-y-0"
         >
           <div class="w-full">
             <p class="text-lg leading-7">
@@ -86,15 +86,15 @@ changeFreq: daily
 
       {# speaking #}
       <section class="mb-8">
-        <div class="flex justify-start items-center mb-2">
+        <div class="flex items-center justify-start mb-2">
           <h2
-            class="inline-block bg-black text-white text-2xl font-bold px-4 leading-normal transform -rotate-1"
+            class="inline-block px-4 text-2xl font-bold leading-normal text-white transform bg-black shadow -rotate-1"
           >
             Speak
           </h2>
         </div>
         <div
-          class="border-jsmn-yellow border-4 p-4 flex justify-between items-center flex-wrap sm:flex-nowrap space-y-4 sm:space-y-0"
+          class="flex flex-wrap items-center justify-between p-4 space-y-4 border-4 border-jsmn-yellow sm:flex-nowrap sm:space-y-0"
         >
           <div>
             <h3 class="text-2xl font-bold">Interested in speaking?</h3>
@@ -105,10 +105,10 @@ changeFreq: daily
           </div>
           <div class="w-full sm:w-auto">
             <a
-              class="text-xl font-semibold border-2 border-black p-4 hover:bg-jsmn-yellow transition-all duration-100 flex justify-evenly items-center"
+              class="flex items-center p-4 text-xl font-semibold text-center transition-all duration-100 border-2 border-black lg:text-left hover:bg-jsmn-yellow justify-evenly"
               href="{{ '/speak/' | url }}"
             >
-              <span>Speak at JSMN!</span>
+              Speak at JSMN!
             </a>
           </div>
         </div>
@@ -116,9 +116,9 @@ changeFreq: daily
 
       {# promoted sponsors #}
       <section class="mb-8">
-        <div class="flex justify-between items-center mb-2">
+        <div class="flex items-center justify-between mb-2">
           <h2
-            class="inline-block bg-black text-white text-2xl font-bold px-4 leading-normal transform -rotate-1"
+            class="inline-block px-4 text-2xl font-bold leading-normal text-white transform bg-black shadow -rotate-1"
           >
             Sponsors
           </h2>
@@ -128,20 +128,20 @@ changeFreq: daily
             </a>
           </p>
         </div>
-        <div class="border-jsmn-yellow border-4 p-4">
+        <div class="p-4 border-4 border-jsmn-yellow">
           {% for section in sponsors %} {% if section.showOnHome === true %}
           <div class="w-2/3 mx-auto mb-4">
-            <h3 class="font-bold text-2xl">{{ section.section | safe }}</h3>
+            <h3 class="text-2xl font-bold">{{ section.section | safe }}</h3>
             <div
-              class="grid sm:grid-cols-4 sm:gap-2 grid-cols-none space-y-4 sm:space-y-0"
+              class="grid grid-cols-none space-y-4 md:grid-cols-2 lg:grid-cols-4 sm:gap-2 sm:space-y-0"
             >
               {% for sponsor in section.sponsors %}
-              <div class="flex justify-center items-center">
+              <div class="flex items-center justify-center">
                 <a
                   href="{{ sponsor.href }}"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="flex justify-center items-center shadow transition-all border border-gray-200 hover:border-gray-600 w-full p-4"
+                  class="flex items-center justify-center w-full p-4 transition-all border border-gray-200 shadow hover:border-gray-600"
                 >
                   <img
                     src="{{ sponsor.imgSrc | url }}"

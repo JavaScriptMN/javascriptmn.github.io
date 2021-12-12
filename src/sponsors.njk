@@ -3,14 +3,14 @@ layout: base
 title: Sponsors
 ---
 
-<div class="container mx-auto p-2 my-8">
-  <div class="x-h-screen flex justify-center items-center">
+<div class="container p-2 mx-auto my-8">
+  <div class="flex items-center justify-center x-h-screen">
     <div class="w-full">
       <div class="mb-8">
 
-        <div class="flex flex-wrap justify-between items-center">
+        <div class="flex flex-wrap items-center justify-between">
           <h1
-            class="inline-block bg-black text-white text-3xl font-bold px-4 mb-2 transform -rotate-1"
+            class="inline-block px-4 mb-2 text-3xl font-bold text-white transform bg-black shadow -rotate-1"
           >
             Sponsors
           </h1>
@@ -19,18 +19,18 @@ title: Sponsors
           </p>
         </div>
 
-        <div class="border-jsmn-yellow border-4 p-4 divide-y divide-gray-200">
+        <div class="p-4 border-4 divide-y divide-gray-200 border-jsmn-yellow">
           {% for section in sponsors %}
           <div class="py-4">
             <h2 class="text-3xl font-bold">{{ section.section | safe }}</h2>
-            <ul class="grid sm:grid-cols-3 sm:gap-2 grid-cols-none">
+            <ul class="grid grid-cols-none sm:grid-cols-3 sm:gap-2">
               {% for sponsor in section.sponsors %}
-              <li class="flex justify-center items-center">
+              <li class="flex items-center justify-center">
                 <a
                   href="{{ sponsor.href }}"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="flex justify-center items-center shadow border border-gray-200 hover:border-gray-600 w-full p-4 m-2"
+                  class="flex items-center justify-center w-full p-4 m-2 border border-gray-200 shadow hover:border-gray-600"
                 >
                   <img
                     src="{{ sponsor.imgSrc | url }}"
@@ -42,10 +42,10 @@ title: Sponsors
               </li>
               {% else %}
               <li
-                class="flex justify-center items-center p-4 m-2 border border-gray-200 hover:border-gray-600 shadow"
+                class="flex items-center justify-center p-4 m-2 border border-gray-200 shadow hover:border-gray-600"
               >
                 <a
-                  class="transition-all transform h-32 w-full flex justify-center items-center"
+                  class="flex items-center justify-center w-full h-32 transition-all transform"
                   href="{{ '/sponsorship-opportunities/' | url }}"
                 >
                   <span class="text-lg font-bold">Become a sponsor →</span>
