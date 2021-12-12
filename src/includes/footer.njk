@@ -1,11 +1,11 @@
-<footer class="border-t-2 border-black mt-10">
-  <div class="container mx-auto p-2 pt-4">
+<footer class="mt-10 border-t-2 border-black">
+  <div class="container p-2 pt-4 mx-auto">
     <div
-      class="flex justify-center items-start space-x-16"
+      class="flex items-start justify-center gap-x-4 sm:gap-x-16"
     >
       <div class="px-2">
         <p
-          class="uppercase inline-block bg-black text-white font-bold px-4 mb-2 transform -rotate-1"
+          class="inline-block px-4 mb-2 font-bold text-white uppercase transform bg-black shadow -rotate-1"
           id="footer-meetup"
         >
           Meetup
@@ -13,7 +13,7 @@
         <ul aria-describedby="footer-meetup" class="space-y-2 sm:space-y-0">
           {% for link in site.navigation %}
           <li>
-            <a class="hover:underline" href="{{ link.path | url }}"
+            <a class="hover:underline hover:decoration-jsmn-mauve hover:decoration-2" href="{{ link.path | url }}"
               >{{ link.text }}</a
             >
           </li>
@@ -22,7 +22,7 @@
       </div>
       <div class="px-2">
         <p
-          class="uppercase inline-block bg-black text-white font-bold px-4 mb-2 transform rotate-1"
+          class="inline-block px-4 mb-2 font-bold text-white uppercase transform bg-black shadow rotate-1"
           id="footer-connect"
         >
           Connect
@@ -30,7 +30,7 @@
         <ul aria-describedby="footer-connect" class="space-y-2 sm:space-y-0">
           {% for link in site.connect %}
           <li>
-            <a class="hover:underline" href="{{ link.href }}" rel="noopener noreferrer"
+            <a class="hover:underline hover:decoration-jsmn-mauve hover:decoration-2" href="{{ link.href }}" rel="noopener noreferrer"
               >{{ link.text }}</a
             >
           </li>
@@ -38,7 +38,7 @@
         </ul>
       </div>
     </div>
-    <div class="text-center text-sm py-8">
+    <div class="py-8 text-sm text-center">
       <p>© {% year %} JavaScriptMN</p>
     </div>
   </div>
