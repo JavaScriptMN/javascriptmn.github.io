@@ -8,6 +8,16 @@ const {
   version: eleventyVersion,
 } = require('./node_modules/@11ty/eleventy/package.json');
 
+const dateFormatter = Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  weekday: 'long',
+  hour: 'numeric',
+  minute: 'numeric',
+  timeZoneName: 'short',
+});
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/css/tailwind.include.css');
   eleventyConfig.addPassthroughCopy({ public: './' });
@@ -21,15 +31,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter('formatDateTime', function (date) {
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      weekday: 'long',
-      hour: 'numeric',
-      minute: 'numeric',
-      timeZoneName: 'short',
-    });
+    return dateFormatter.format(date);
   });
 
   eleventyConfig.addPlugin(inclusiveLangPlugin);
