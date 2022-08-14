@@ -16,7 +16,7 @@ module.exports = [
     title: 'JavaScriptMN Picnic',
     date: new Date('2022-08-14T16:00-05:00'),
     link: 'https://www.meetup.com/javascriptmn/events/287146742/',
-    location: 'Como Midway Picnic Pavilion: 1199 Midway Pkwy · St Paul, MN',
+    location: 'Como Park Picnic Shelter (next to the mini golf and Como Town), St Paul, MN',
   },
   {
     title: 'July Event: Show and Tell',
