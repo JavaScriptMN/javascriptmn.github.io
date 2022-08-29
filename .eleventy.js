@@ -4,9 +4,6 @@ const cacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
 const htmlmin = require('html-minifier');
 const { minify } = require('terser');
 const siteSettings = require('./src/globals/site.json');
-const {
-  version: eleventyVersion,
-} = require('./node_modules/@11ty/eleventy/package.json');
 
 const dateFormatter = Intl.DateTimeFormat('en-US', {
   year: 'numeric',
@@ -24,10 +21,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode('year', function () {
     return new Date().getFullYear().toString();
-  });
-
-  eleventyConfig.addShortcode('eleventyVersion', function () {
-    return `Eleventy ${eleventyVersion}`;
   });
 
   eleventyConfig.addFilter('formatDateTime', function (date) {
