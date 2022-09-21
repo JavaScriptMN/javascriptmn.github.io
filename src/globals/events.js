@@ -13,6 +13,12 @@
  */
 module.exports = [
   {
+    title: 'September Event: Show and Tell',
+    date: new Date('2022-09-28T18:00-05:00'),
+    link: 'https://www.meetup.com/javascriptmn/events/jwrvwsydcmblc/',
+    location: 'Virtual',
+  },
+  {
     title: 'August Event: Show and Tell',
     date: new Date('2022-08-31T18:00-05:00'),
     link: 'https://www.meetup.com/javascriptmn/events/jwrvwsydclbpc/',
@@ -22,7 +28,8 @@ module.exports = [
     title: 'JavaScriptMN Picnic',
     date: new Date('2022-08-14T16:00-05:00'),
     link: 'https://www.meetup.com/javascriptmn/events/287146742/',
-    location: 'Como Park Picnic Shelter (next to the mini golf and Como Town), St Paul, MN',
+    location:
+      'Como Park Picnic Shelter (next to the mini golf and Como Town), St Paul, MN',
   },
   {
     title: 'July Event: Show and Tell',
