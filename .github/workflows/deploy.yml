@@ -2,7 +2,7 @@ name: Deploy
 on:
   push:
     branches:
-      - build
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -20,5 +20,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: master
+          publish_branch: gh-pages
           publish_dir: ./dist
