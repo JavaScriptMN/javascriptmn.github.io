@@ -14,15 +14,15 @@
     "start": "run-p start:css start:js",
     "prebuild": "rimraf dist",
     "build": "run-s build:css build:js",
-    "start:js": "cross-env ELEVENTY_ENV=development TZ=America/Chicago eleventy --serve",
-    "build:js": "cross-env ELEVENTY_ENV=production TZ=America/Chicago eleventy",
-    "start:css": "tailwindcss -i ./src/css/tailwind.css -o ./src/css/tailwind.include.css --watch",
-    "build:css": "tailwindcss -i ./src/css/tailwind.css -o ./src/css/tailwind.include.css --minify",
+    "start:js": "TZ=America/Chicago eleventy --serve",
+    "build:js": "TZ=America/Chicago eleventy",
+    "start:css": "tailwindcss -i ./src/css/tailwind.css -o ./dist/css/tailwind.css --watch",
+    "build:css": "tailwindcss -i ./src/css/tailwind.css -o ./dist/css/tailwind.css --minify",
     "lint": "pretty-quick --staged",
     "setup-git-hooks": "simple-git-hooks"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
     "@mightyplow/eleventy-plugin-cache-buster": "^1.1.3",
     "@tailwindcss/typography": "^0.5.9",
@@ -30,12 +30,12 @@
     "cross-env": "^7.0.3",
     "html-minifier": "^4.0.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.8.3",
+    "prettier": "^2.8.4",
     "pretty-quick": "^3.1.3",
-    "rimraf": "^4.1.2",
+    "rimraf": "^4.3.1",
     "simple-git-hooks": "^2.8.1",
-    "tailwindcss": "^3.2.4",
-    "terser": "^5.16.2"
+    "tailwindcss": "^3.2.7",
+    "terser": "^5.16.5"
   },
   "repository": {
     "type": "git",

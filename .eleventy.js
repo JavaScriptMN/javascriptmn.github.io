@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('node:fs');
 const inclusiveLangPlugin = require('@11ty/eleventy-plugin-inclusive-language');
 const cacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
 const htmlmin = require('html-minifier');
@@ -16,7 +16,9 @@ const dateFormatter = Intl.DateTimeFormat('en-US', {
 });
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('./src/css/tailwind.include.css');
+  const runMode = process.env.ELEVENTY_RUN_MODE;
+  const isProduction = runMode === 'build';
+
   eleventyConfig.addPassthroughCopy({ public: './' });
 
   eleventyConfig.addShortcode('year', function () {
@@ -29,7 +31,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(inclusiveLangPlugin);
 
-  if (process.env.ELEVENTY_ENV === 'production') {
+  if (isProduction) {
     eleventyConfig.addPlugin(cacheBuster({ outputDirectory: 'dist' }));
 
     eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
@@ -45,37 +47,19 @@ module.exports = function (eleventyConfig) {
     });
   }
 
-  eleventyConfig.addNunjucksAsyncFilter(
-    'jsmin',
-    async function (code, callback) {
-      if (process.env.ELEVENTY_ENV === 'production') {
-        try {
-          const minified = await minify(code);
-          callback(null, minified.code);
-        } catch (err) {
-          console.error('Terser error: ', err);
-          // Fail gracefully.
-          callback(null, code);
-        }
-      } else {
-        callback(null, code);
+  eleventyConfig.addAsyncFilter('jsmin', async function (code) {
+    if (isProduction) {
+      try {
+        const minified = await minify(code);
+        return minified.code;
+      } catch (err) {
+        console.error('Terser error: ', err);
+        // Fail gracefully.
+        return code;
       }
+    } else {
+      return code;
     }
-  );
-
-  eleventyConfig.setBrowserSyncConfig({
-    callbacks: {
-      ready: function (err, bs) {
-        bs.addMiddleware('*', (req, res) => {
-          const content_404 = fs.readFileSync('dist/404.html');
-          // Provides the 404 content without redirect.
-          res.write(content_404);
-          // Add 404 http status code in request header.
-          res.writeHead(404, { 'Content-Type': 'text/html' });
-          res.end();
-        });
-      },
-    },
   });
 
   return {
