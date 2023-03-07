@@ -4,7 +4,6 @@
   "version": "3.0.0",
   "private": true,
   "author": "JavaScriptMN Organizers <javascriptmn@gmail.com>",
-  "dependencies": {},
   "keywords": [
     "11ty"
   ],
@@ -25,6 +24,7 @@
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
     "@mightyplow/eleventy-plugin-cache-buster": "^1.1.3",
+    "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.13",
     "cross-env": "^7.0.3",

@@ -1,6 +1,7 @@
 const fs = require('node:fs');
 const inclusiveLangPlugin = require('@11ty/eleventy-plugin-inclusive-language');
 const cacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
+const pluginSitemap = require('@quasibit/eleventy-plugin-sitemap');
 const htmlmin = require('html-minifier');
 const { minify } = require('terser');
 const siteSettings = require('./src/globals/site.json');
@@ -18,6 +19,12 @@ const dateFormatter = Intl.DateTimeFormat('en-US', {
 module.exports = function (eleventyConfig) {
   const runMode = process.env.ELEVENTY_RUN_MODE;
   const isProduction = runMode === 'build';
+
+  eleventyConfig.addPlugin(pluginSitemap, {
+    sitemap: {
+      hostname: siteSettings.url,
+    },
+  });
 
   eleventyConfig.addPassthroughCopy({ public: './' });
 
