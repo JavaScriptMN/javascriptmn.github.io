@@ -15,7 +15,7 @@ module.exports = [
   {
     title: 'April Event: Open Floor Show/Tell and Discussion',
     date: new Date('2023-04-26T18:00-05:00'),
-    link: 'https://www.meetup.com/javascriptmn/events/rfsbdtyfcgbjc/',
+    link: 'https://www.meetup.com/javascriptmn/events/trsbdtyfcgbjc/',
     location: 'Virtual',
   },
   {
