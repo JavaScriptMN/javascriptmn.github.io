@@ -13,6 +13,13 @@
  */
 module.exports = [
   {
+    title:
+      'May Event: Deploy It! Getting your application to production with Luke Schlangen',
+    date: new Date('2023-05-31T18:00-05:00'),
+    link: 'https://www.meetup.com/javascriptmn/events/trsbdtyfchbpc/',
+    location: 'Virtual',
+  },
+  {
     title: 'April Event: Open Floor Show/Tell and Discussion',
     date: new Date('2023-04-26T18:00-05:00'),
     link: 'https://www.meetup.com/javascriptmn/events/trsbdtyfcgbjc/',
