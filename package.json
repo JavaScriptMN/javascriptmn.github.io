@@ -35,7 +35,7 @@
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
     "simple-git-hooks": "^2.9.0",
-    "tailwindcss": "^3.3.3",
+    "tailwindcss": "^3.3.5",
     "terser": "^5.22.0"
   },
   "repository": {
