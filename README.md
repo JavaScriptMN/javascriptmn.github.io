@@ -7,6 +7,7 @@ PRs should be made against the `main` branch. Upon merging, a GitHub Action will
 ## Prerequisites
 
 Install dependencies with `npm install`.
+Set up git hooks with `npm run setup-git-hooks`.
 
 ## Develop
 
