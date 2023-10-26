@@ -1,4 +1,5 @@
 /dist
+/public
 *.include.css
 package.json
 package-lock.json

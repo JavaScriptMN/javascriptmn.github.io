@@ -2,8 +2,9 @@
 (function publicStaticVoidMain(stringArgs) {
   console.info(
     "%cHey! We'd love for you to give a talk, please reach out!",
-    'font-size: 2rem; color: #e5cf5f; background-color: #222;'
+    'font-size: 2rem; color: #e5cf5f; background-color: #222;',
   );
+
   console.info('%c❤️', 'font-size: 5rem; color: red;');
 
   window.onload = function () {
