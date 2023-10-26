@@ -45,9 +45,6 @@
   "simple-git-hooks": {
     "pre-commit": "npm run lint-staged"
   },
-  "prettier": {
-    "singleQuote": true
-  },
   "lint-staged": {
     "*": "prettier --ignore-unknown --write"
   }

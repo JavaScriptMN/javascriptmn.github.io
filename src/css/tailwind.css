@@ -46,14 +46,14 @@ Call to action effects
 
 :root {
   /* Light Cornflower Blue */
-  --box-flap-color-1: theme('colors.jsmn-blue');
+  --box-flap-color-1: theme("colors.jsmn-blue");
   /* English Red */
-  --box-flap-color-2: theme('colors.jsmn-red');
+  --box-flap-color-2: theme("colors.jsmn-red");
   /* Old Mauve (not used yet) */
-  --box-flap-color-3: theme('colors.jsmn-mauve');
+  --box-flap-color-3: theme("colors.jsmn-mauve");
 
-  --box-flap-size: theme('spacing.16');
-  --box-flap-offset: theme('spacing.8');
+  --box-flap-size: theme("spacing.16");
+  --box-flap-offset: theme("spacing.8");
 }
 
 .box-flap {
@@ -76,8 +76,8 @@ Call to action effects
   animation: flapping 10s ease-in-out infinite;
   /* safari cannot handle calc + variable; use the tailwind/postcss fallback for now */
   /* transform: translateX(calc(-1 * var(--box-flap-size))) translateY(calc(-1 * var(--box-flap-size))); */
-  transform: translateX(calc(-1 * theme('spacing.16')))
-    translateY(calc(-1 * theme('spacing.16')));
+  transform: translateX(calc(-1 * theme("spacing.16")))
+    translateY(calc(-1 * theme("spacing.16")));
 }
 
 @keyframes flapping {
