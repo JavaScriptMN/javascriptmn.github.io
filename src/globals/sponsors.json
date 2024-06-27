@@ -1,49 +1,7 @@
 [
   {
-    "showOnHome": true,
-    "section": "Host <span role=\"img\" aria-label=\"earth\">🌎</span>",
-    "sponsors": [
-      {
-        "imgSrc": "/sponsors/logo-wework.svg",
-        "href": "https://www.wework.com",
-        "title": "WeWork"
-      }
-    ]
-  },
-  {
-    "showOnHome": true,
-    "section": "Diamond <span role=\"img\" aria-label=\"diamond\">💎</span>",
-    "sponsors": [
-      {
-        "imgSrc": "/sponsors/logo-twilio.svg",
-        "href": "https://twilio.com",
-        "title": "Twilio"
-      },
-      {
-        "imgSrc": "/sponsors/logo-trackjs.svg",
-        "href": "https://trackjs.com",
-        "title": "TrackJS"
-      },
-      {
-        "imgSrc": "/sponsors/logo-frontend-masters.svg",
-        "href": "https://frontendmasters.com",
-        "title": "Frontend Masters"
-      },
-      {
-        "imgSrc": "/sponsors/logo-ch-robinson.svg",
-        "href": "https://www.chrobinson.com",
-        "title": "C.H. Robinson"
-      }
-    ]
-  },
-  {
-    "showOnHome": false,
-    "section": "Gold <span role=\"img\" aria-label=\"gold medal\">🥇</span>",
-    "sponsors": []
-  },
-  {
-    "showOnHome": false,
-    "section": "Silver <span role=\"img\" aria-label=\"silver medal\">🥈</span>",
-    "sponsors": []
+    "imgSrc": "/sponsors/logo-frontend-masters.svg",
+    "href": "https://frontendmasters.com",
+    "title": "Frontend Masters"
   }
 ]
