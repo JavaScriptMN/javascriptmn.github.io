@@ -129,14 +129,10 @@ changeFreq: daily
           </p>
         </div>
         <div class="border-jsmn-yellow border-4 p-4">
-          {% for section in sponsors %} {% if section.showOnHome === true %}
-          <div class="w-2/3 mx-auto mb-4">
-            <h3 class="font-bold text-2xl">{{ section.section | safe }}</h3>
             <div
-              class="grid sm:grid-cols-4 sm:gap-2 grid-cols-none space-y-4 sm:space-y-0"
+              class="grid sm:grid-cols-3 sm:gap-2 grid-cols-none space-y-4 sm:space-y-0"
             >
-              {% for sponsor in section.sponsors %}
-              <div class="flex justify-center items-center">
+              {% for sponsor in sponsors %}
                 <a
                   href="{{ sponsor.href }}"
                   target="_blank"
@@ -150,12 +146,9 @@ changeFreq: daily
                     class="h-32"
                   />
                 </a>
-              </div>
               {% endfor %}
             </div>
           </div>
-          {% endif %} {% endfor %}
-        </div>
       </section>
     </div>
   </div>
