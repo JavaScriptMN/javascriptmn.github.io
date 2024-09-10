@@ -13,6 +13,18 @@
  */
 module.exports = [
   {
+    title: "September Event: Open Floor Show/Tell and Discussion",
+    date: new Date("2024-09-25T18:00-05:00"),
+    link: "https://www.meetup.com/javascriptmn/events/298926938/",
+    location: "Virtual",
+  },
+  {
+    title: "JavaScriptMN In-Person Co-hosted by Frontend Masters and Datasite",
+    date: new Date("2024-08-21T18:00-05:00"),
+    link: "https://www.meetup.com/javascriptmn/events/301694952/",
+    location: "Datasite, 733 S Marquette Ave Unit 600, Minneapolis, MN",
+  },
+  {
     title: "July Event: Open Floor Show/Tell and Discussion",
     date: new Date("2024-07-31T18:00-05:00"),
     link: "https://www.meetup.com/javascriptmn/events/298926936/",
