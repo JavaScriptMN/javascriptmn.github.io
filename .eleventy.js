@@ -1,8 +1,7 @@
-const fs = require("node:fs");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const cacheBuster = require("@mightyplow/eleventy-plugin-cache-buster");
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
-const htmlmin = require("html-minifier");
+const { minify: htmlMinify } = require("html-minifier-terser");
 const { minify } = require("terser");
 const siteSettings = require("./src/globals/site.json");
 
@@ -43,7 +42,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
       if (outputPath && outputPath.endsWith(".html")) {
-        return htmlmin.minify(content, {
+        return htmlMinify(content, {
           useShortDoctype: true,
           removeComments: true,
           collapseWhitespace: true,
