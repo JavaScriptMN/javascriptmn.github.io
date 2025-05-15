@@ -13,6 +13,12 @@
  */
 module.exports = [
   {
+    title: "JavaScriptMN In-Person with David Khourshid: Goodbye, useState",
+    date: new Date("2025-06-04T17:30-05:00"),
+    link: "https://www.meetup.com/javascriptmn/events/307814628/",
+    location: "Datasite, 733 S Marquette Ave Unit 600, Minneapolis, MN",
+  },
+  {
     title: "April Event: Luke Schlangen",
     date: new Date("2025-04-30T18:00-05:00"),
     link: "https://www.meetup.com/javascriptmn/events/306446941/",
