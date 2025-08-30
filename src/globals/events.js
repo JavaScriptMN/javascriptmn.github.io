@@ -13,6 +13,12 @@
  */
 module.exports = [
   {
+    title: "JavaScriptMN In-Person",
+    date: new Date("2025-09-17T18:00-05:00"),
+    link: "https://www.meetup.com/javascriptmn/events/309201511/",
+    location: "Datasite, 733 S Marquette Ave Unit 600, Minneapolis, MN",
+  },
+  {
     title: "August Event: Open Floor Show/Tell and Discussion",
     date: new Date("2025-08-27T18:00-05:00"),
     link: "https://www.meetup.com/javascriptmn/events/308531783/",
