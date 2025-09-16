@@ -13,7 +13,7 @@
  */
 module.exports = [
   {
-    title: "JavaScriptMN In-Person: Brian Muenzenmeyer",
+    title: "JavaScriptMN In-Person: Brian Muenzenmeyer and Todd Gardner",
     date: new Date("2025-09-17T18:00-05:00"),
     link: "https://www.meetup.com/javascriptmn/events/309201511/",
     location: "Datasite, 733 S Marquette Ave Unit 600, Minneapolis, MN",
