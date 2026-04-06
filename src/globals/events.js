@@ -15,7 +15,7 @@ module.exports = [
   {
     title: "JavaScriptMN In-Person at Target Plaza Commons",
     date: new Date("2026-04-15T18:00-05:00"),
-    link: "https://www.meetup.com/javascriptmn/events/313105536/",
+    link: "https://www.meetup.com/javascriptmn/events/313533704/",
     location: "Target Plaza Commons, 1001 Nicollet Mall, Minneapolis, MN 55403",
   },
   {
