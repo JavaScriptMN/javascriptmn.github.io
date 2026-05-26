@@ -1,5 +1,5 @@
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
-const cacheBuster = require("@mightyplow/eleventy-plugin-cache-buster");
+const eleventyAutoCacheBuster = require("eleventy-auto-cache-buster");
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
 const { minify: htmlMinify } = require("html-minifier-terser");
 const { minify } = require("terser");
@@ -38,7 +38,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(inclusiveLangPlugin);
 
   if (isProduction) {
-    eleventyConfig.addPlugin(cacheBuster({ outputDirectory: "dist" }));
+    eleventyConfig.addPlugin(eleventyAutoCacheBuster);
 
     eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
       if (outputPath && outputPath.endsWith(".html")) {
