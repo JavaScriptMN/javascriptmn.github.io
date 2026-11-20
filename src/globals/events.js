@@ -13,6 +13,18 @@
  */
 module.exports = [
   {
+    title: "December Event: In-Person at Livefront",
+    date: new Date("2026-12-09T18:00-06:00"),
+    link: "https://www.meetup.com/javascriptmn/events/315706872/",
+    location: "Livefront, 1229 Tyler St NE #100, Minneapolis, MN 55413, USA",
+  },
+  {
+    title: "October Event: Java's Crypt In-Person at Livefront",
+    date: new Date("2026-10-28T18:00-05:00"),
+    link: "https://www.meetup.com/javascriptmn/events/316760008/",
+    location: "Livefront, 1229 Tyler St NE #100, Minneapolis, MN 55413, USA",
+  },
+  {
     title: "September Event: Open Floor Show/Tell and Discussion",
     date: new Date("2026-09-30T18:00-05:00"),
     link: "https://www.meetup.com/javascriptmn/events/315706872/",
